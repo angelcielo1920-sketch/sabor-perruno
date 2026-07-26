@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megapack Emprendedor: 200 Moldes Premium para Mascotas</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF385C;
+            --primary-hover: #E00B41;
+            --secondary: #2563EB;
+            --accent: #FFB800;
+            --dark: #0F172A;
+            --dark-card: #1E293B;
+            --light-bg: #F8FAFC;
+            --border: #E2E8F0;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --success: #16A34A;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 70px; /* Space for floating CTA bar */
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* URGENCY TOP BAR */
+        .top-bar {
+            background: linear-gradient(90deg, #FF385C, #FF6B00);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 9px 15px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 10px rgba(255, 56, 92, 0.25);
+            position: relative;
+            z-index: 100;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: #FFFFFF;
+            padding: 40px 0 50px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFF1F2;
+            color: var(--primary);
+            border: 1px solid #FFE4E6;
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.82rem;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero h1 span.highlight {
+            color: var(--primary);
+            background: linear-gradient(120deg, rgba(255,56,92,0.12) 0%, rgba(255,56,92,0.02) 100%);
+            padding: 0 6px;
+            border-radius: 6px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.08rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            line-height: 1.55;
+        }
+
+        /* HERO GALLERY SHOWCASE */
+        .hero-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            background: #F1F5F9;
+            padding: 12px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border: 1px solid #E2E8F0;
+        }
+
+        .hero-img-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+        }
+
+        .hero-img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .hero-img-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-img-tag {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            right: 6px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(4px);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        /* INTERMEDIATE OFFER / CTA BLOCK (REPOSITIONED BELOW SOLUTION) */
+        .mid-cta-section {
+            padding: 35px 0 45px 0;
+            background: #F1F5F9;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mid-cta-box {
+            background: #FFFFFF;
+            max-width: 680px;
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 28px 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid #E2E8F0;
+            text-align: center;
+        }
+
+        .hero-price-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 0 auto 18px auto;
+            background: #F8FAFC;
+            padding: 12px 20px;
+            border-radius: 14px;
+            width: fit-content;
+            border: 1px solid #E2E8F0;
+        }
+
+        .price-main {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--success);
+            line-height: 1;
+        }
+
+        .price-old {
+            font-size: 1.1rem;
+            text-decoration: line-through;
+            color: #94A3B8;
+            display: block;
+        }
+
+        .price-local {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* BUTTON CTA */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--success);
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            font-weight: 800;
+            padding: 15px 28px;
+            border-radius: 14px;
+            text-decoration: none;
+            box-shadow: 0 10px 22px rgba(22, 163, 74, 0.3);
+            transition: all 0.25s ease;
+            width: 100%;
+            max-width: 440px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .btn-cta:hover {
+            background: #15803D;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(22, 163, 74, 0.4);
+        }
+
+        .trust-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 14px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            flex-wrap: wrap;
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: var(--dark);
+            color: white;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.88rem;
+            color: #94A3B8;
+            margin-top: 6px;
+        }
+
+        /* SECTION TITLES */
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 40px auto;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            font-size: 1.02rem;
+            color: var(--text-muted);
+        }
+
+        /* PROBLEM SECTION */
+        .problem-section {
+            padding: 60px 0;
+            background: #FFF5F5;
+        }
+
+        .cards-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card-problem {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid #FEE2E2;
+            border-top: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.04);
+        }
+
+        .card-problem .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .card-problem h3 {
+            font-size: 1.15rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .card-problem p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        /* SOLUTION SECTION */
+        .solution-section {
+            padding: 65px 0 50px 0;
+            background: #FFFFFF;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .solution-box {
+            background: #F8FAFC;
+            border: 2px dashed var(--secondary);
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .solution-box h3 {
+            font-size: 1.35rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.98rem;
+            margin-bottom: 14px;
+            color: var(--text-main);
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #DBEAFE;
+            color: var(--secondary);
+            font-weight: 800;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-size: 0.8rem;
+        }
+
+        /* MODULES WITH REAL PHOTOS */
+        .modules-section {
+            padding: 70px 0;
+            background: #F8FAFC;
+        }
+
+        .module-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .module-card:nth-child(even) {
+            grid-template-columns: 1fr 290px;
+        }
+
+        .module-card:nth-child(even) .module-img-box {
+            order: 2;
+        }
+
+        .module-img-box {
+            width: 100%;
+            height: 210px;
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .module-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .module-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--dark);
+            color: #FFFFFF;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .module-content h3 {
+            font-size: 1.35rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .module-content p {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .module-pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .pill-item {
+            background: #F1F5F9;
+            color: var(--dark);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1px solid #E2E8F0;
+        }
+
+        /* PRINTING PROCESS */
+        .process-section {
+            padding: 60px 0;
+            background: #FFFFFF;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            text-align: center;
+        }
+
+        .process-step {
+            background: #F8FAFC;
+            padding: 25px 18px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px auto;
+        }
+
+        .process-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: var(--dark);
+        }
+
+        /* BONUSES */
+        .bonus-section {
+            padding: 70px 0;
+            background: #FFFDF0;
+            border-top: 2px dashed var(--accent);
+            border-bottom: 2px dashed var(--accent);
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .bonus-card {
+            background: #FFFFFF;
+            border: 2px solid var(--accent);
+            border-radius: 18px;
+            padding: 22px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 8px 20px rgba(255, 184, 0, 0.08);
+        }
+
+        .bonus-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 16px;
+        }
+
+        .bonus-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .bonus-card h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .bonus-value {
+            margin-top: 12px;
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* TESTIMONIOS VISUALES Y FOTOGRÁFICOS REALES */
+        .testimonials-section {
+            padding: 75px 0;
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .photo-testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+
+        .photo-testimonial-card {
+            background: #F8FAFC;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-img-wrapper {
+            position: relative;
+            height: 260px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .testimonial-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-tag-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(6px);
+            color: #FFFFFF;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .testimonial-verified-badge {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            background: var(--success);
+            color: #FFFFFF;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+        }
+
+        .testimonial-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .testimonial-header-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .author-details h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+
+        .author-details span {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .quote-box {
+            background: #FFFFFF;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            font-size: 0.94rem;
+            color: var(--text-main);
+            font-style: italic;
+            line-height: 1.55;
+            position: relative;
+        }
+
+        /* GATILLO MENTAL Y BANNER DE OPORTUNIDAD */
+        .opportunity-trigger-box {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            border-radius: 20px;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+            border: 2px solid #334155;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .opportunity-trigger-box h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .opportunity-trigger-box p {
+            font-size: 1rem;
+            color: #CBD5E1;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* MAIN OFFER SECTION */
+        .pricing-section {
+            padding: 75px 0;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .offer-box {
+            background: #FFFFFF;
+            color: var(--text-main);
+            max-width: 760px;
+            margin: 0 auto;
+            border-radius: 24px;
+            padding: 38px 28px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+        }
+
+        .offer-header-badge {
+            background: #FFE4E6;
+            color: var(--primary);
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .main-usd-price {
+            font-size: 3.5rem;
+            color: var(--success);
+            font-weight: 800;
+            line-height: 1;
+            margin: 12px 0 4px 0;
+        }
+
+        .sub-local-price {
+            font-size: 1.15rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .price-calculation {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 22px;
+            background: #F1F5F9;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .offer-checklist {
+            text-align: left;
+            max-width: 520px;
+            margin: 0 auto 30px auto;
+            list-style: none;
+        }
+
+        .offer-checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #F1F5F9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
+
+        .offer-checklist li span.check {
+            color: var(--success);
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 70px 0;
+            background: #FFFFFF;
+        }
+
+        .faq-container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-bottom: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .faq-question {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* FLOATING CTA BAR */
+        .floating-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.96);
+            backdrop-filter: blur(8px);
+            padding: 10px 16px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 -4px 18px rgba(0,0,0,0.18);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .floating-info {
+            color: white;
+        }
+
+        .floating-price {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--success);
+        }
+
+        .floating-sub {
+            font-size: 0.72rem;
+            color: #94A3B8;
+        }
+
+        .floating-btn {
+            background: var(--success);
+            color: white;
+            font-weight: 800;
+            padding: 10px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            background: #15803D;
+        }
+
+        /* WHATSAPP FLOATING BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 75px;
+            right: 18px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 700;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20BA5A;
+            transform: scale(1.05);
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
+            color: #FFF;
+        }
+
+        .whatsapp-float svg {
+            width: 26px;
+            height: 26px;
+            fill: currentColor;
+        }
+
+        .whatsapp-text {
+            font-size: 0.88rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            .whatsapp-text {
+                display: none;
+            }
+            .whatsapp-float {
+                padding: 12px;
+                border-radius: 50%;
+                bottom: 70px;
+                right: 14px;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: #94A3B8;
+            text-align: center;
+            padding: 30px 0 85px 0;
+            font-size: 0.82rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* MOBILE RESPONSIVE ADJUSTMENTS */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+                line-height: 1.25;
+                margin-bottom: 10px;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 0;
+            }
+
+            .hero-gallery {
+                margin-top: 15px;
+            }
+
+            .hero-price-box {
+                padding: 10px 14px;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .price-main {
+                font-size: 1.75rem;
+            }
+
+            .price-old {
+                font-size: 0.95rem;
+            }
+
+            .price-local {
+                font-size: 0.78rem;
+            }
+
+            .btn-cta {
+                font-size: 0.98rem;
+                padding: 13px 18px;
+                border-radius: 12px;
+                max-width: 100%;
+            }
+
+            .trust-icons {
+                font-size: 0.75rem;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .solution-grid { grid-template-columns: 1fr; }
+            .module-card, .module-card:nth-child(even) { grid-template-columns: 1fr; }
+            .module-card:nth-child(even) .module-img-box { order: 0; }
+            .cards-grid-3, .stats-grid, .process-grid, .bonus-grid { grid-template-columns: 1fr; }
+            .main-usd-price { font-size: 2.8rem; }
+            .floating-info { display: none; }
+            .floating-cta-bar { justify-content: center; }
+            .floating-btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE URGENCIA -->
+    <div class="top-bar">
+        ⚡ OFERTA LIMITADA DE LANZAMIENTO: 80% DE DESCUENTO DISPONIBLE HOY - DESCARGA INMEDIATA ⚡
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <span class="badge-pill">🐾 Franquicia Digital de Costura Canina</span>
+                    
+                    <h1>Crea, Cose y Emprende con <span class="highlight">200 Moldes Premium</span> para Mascotas</h1>
+                    
+                    <p class="hero-subtitle">
+                        El catálogo digital más completo y codiciado de internet: <strong>71 patrones base profesionales</strong> listos para descargar, imprimir en tu impresora casera (A4/Carta) y coser hoy mismo. ¡Desde ropa de abrigo hasta camas y bolsos transportadores!
+                    </p>
+                </div>
+
+                <!-- GALERÍA MUESTRARIO FOTOGRÁFICO EN EL HERO -->
+                <div class="hero-gallery">
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Perrito con abrigo acolchado">
+                        <div class="hero-img-tag">🧥 Abrigos e Impermeables</div>
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=600&q=80" alt="Perrito con pijama">
+                        <div class="hero-img-tag">💤 Pijamas y Batas</div>
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Perrito con vestido chic">
+                        <div class="hero-img-tag">👗 Moda de Verano</div>
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80" alt="Perrito en cama acolchada">
+                        <div class="hero-img-tag">🛋️ Camas y Bolsos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE PROBLEMAS -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Te Sientes Identificada con Alguno de Estos Obstáculos?</h2>
+                <p class="section-subtitle">Si te apasiona la costura o quieres iniciar un negocio de ropa para mascotas, estos problemas suelen frenar tu progreso:</p>
+            </div>
+
+            <div class="cards-grid-3">
+                <div class="card-problem">
+                    <div class="icon">💸</div>
+                    <h3>Gastar una fortuna comprando patrones individuales</h3>
+                    <p>Un solo molde comprado en tiendas o páginas web cuesta entre $2.50 y $5.00 USD. Comprar una colección entera para tu negocio te terminaría costando más de $200 USD.</p>
+                </div>
+                <div class="card-problem">
+                    <div class="icon">📐</div>
+                    <h3>Moldes de internet mal escalados que no le quedan bien</h3>
+                    <p>Perder tela y horas de trabajo intentando ajustar patrones gratis de internet que terminan quedando apretados en el tórax o incómodos para la mascota.</p>
+                </div>
+                <div class="card-problem">
+                    <div class="icon">🤯</div>
+                    <h3>Perder tiempo valioso diseñando desde cero</h3>
+                    <p>Tener la máquina de coser lista pero no saber por dónde empezar a trazar las sisas o cuellos, consumiendo tiempo que podrías estar usando para confeccionar y vender.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOLUCIÓN -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="solution-grid">
+                <div>
+                    <h2 class="section-title" style="text-align: left;">La Solución Definitiva: Tu Franquicia Digital de Moda Canina</h2>
+                    <p style="font-size:1.02rem; color:var(--text-muted); margin-bottom:22px;">
+                        Olvídate de adivinar medidas o comprar patrones sueltos a precios elevados. Con este megapack tendrás acceso ilimitado a un catálogo completo organizado por carpetas en PDF listo para imprimir.
+                    </p>
+                    <div class="solution-box">
+                        <h3>📦 ¿Qué incluye exacto tu producto digital?</h3>
+                        <ul class="feature-list">
+                            <li>71 Patrones Base profesionales con más de 200 variaciones.</li>
+                            <li>PDFs descargables listos para imprimir en impresora casera (A4 / Carta).</li>
+                            <li>Escalado de tallas completo: XS, S, M, L, XL y XXL.</li>
+                            <li>Esquemas de corte, guías de montaje e instrucciones claras.</li>
+                            <li>Moldes exclusivos de Camas Antiestrés y Bolsos Transportadores.</li>
+                            <li>Acceso de por vida con respaldo de descarga garantizado.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- IMAGEN DEMOSTRATIVA -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Colección de ropa para perros" style="width:100%; border-radius:20px; box-shadow:0 12px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE OFERTA / BLOQUE CTA REUBICADO DEBAJO DE LA SOLUCIÓN -->
+    <section class="mid-cta-section">
+        <div class="container">
+            <div class="mid-cta-box">
+                <!-- CAJA DE PRECIO -->
+                <div class="hero-price-box">
+                    <div>
+                        <span class="price-old">$145 USD</span>
+                        <div class="price-main">$29 USD</div>
+                    </div>
+                    <div class="price-local">
+                        (~₡15,000 Colones)<br>
+                        <span style="color:var(--primary); font-weight:700;">¡80% de Descuento!</span>
+                    </div>
+                </div>
+
+                <!-- BOTÓN DE COMPRA DIRECTO CON LINK DE PAYHIP -->
+                <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=GCka8&qty%5BGCka8%5D=1" target="_blank" rel="noopener noreferrer" class="btn-cta" onclick="redirectToPayhip(event)">
+                    🛒 ¡DESCARGAR MEGAPACK POR $29 USD!
+                </a>
+
+                <div class="trust-icons">
+                    <span>🔒 Pago Seguro vía PayPal / Payhip</span>
+                    <span>⚡ Entrega Inmediata a tu Email</span>
+                    <span>📏 Tallas XS a XXL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULOS DETALLADOS -->
+    <section class="modules-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Desglose Detallado del Contenido Digital</h2>
+                <p class="section-subtitle">Explora todo lo que vas a recibir hoy mismo en tu correo tras realizar tu pedido:</p>
+            </div>
+
+            <!-- MÓDULO 1 -->
+            <div class="module-card">
+                <div class="module-img-box">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80" alt="Abrigos e impermeables para perro">
+                    <div class="module-tag">31 Moldes Incluidos</div>
+                </div>
+                <div class="module-content">
+                    <h3>🧥 1. Zona de Invierno, Frío y Exterior</h3>
+                    <p>Confecciona prendas térmicas de alto valor percibido en el mercado. Mantén a los perritos abrigados con acabados de boutique.</p>
+                    <div class="module-pill-list">
+                        <span class="pill-item">26 Abrigos Premium</span>
+                        <span class="pill-item">Chaquetas Cazadoras</span>
+                        <span class="pill-item">Estilo Chanel</span>
+                        <span class="pill-item">Impermeables con Capucha</span>
+                        <span class="pill-item">4 Capas Elegantes</span>
+                        <span class="pill-item">1 Chaleco Deportivo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 2 -->
+            <div class="module-card">
+                <div class="module-img-box">
+                    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80" alt="Moda y vestidos de perro">
+                    <div class="module-tag">15 Moldes Incluidos</div>
+                </div>
+                <div class="module-content">
+                    <h3>👗 2. Moda Fresca de Verano y Alta Costura</h3>
+                    <p>Diseños ligeros y elegantes ideales para paseos, fiestas de cumpleaños, reuniones familiares y sesiones fotográficas.</p>
+                    <div class="module-pill-list">
+                        <span class="pill-item">11 Vestidos de Fiesta</span>
+                        <span class="pill-item">3 Camisas Casuales</span>
+                        <span class="pill-item">1 Conjunto Chic Jardín</span>
+                        <span class="pill-item">Diseños con Vuelos y Apliques</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 3 -->
+            <div class="module-card">
+                <div class="module-img-box">
+                    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80" alt="Camas y bolsos para perros">
+                    <div class="module-tag">6 Moldes Especiales</div>
+                </div>
+                <div class="module-content">
+                    <h3>💤 3. Descanso, Confort y Viaje ¡NUEVO!</h3>
+                    <p>Los artículos de descanso y transporte son los que generan mayor margen de ganancia en el negocio pet.</p>
+                    <div class="module-pill-list">
+                        <span class="pill-item">Camas Premium Antiestrés</span>
+                        <span class="pill-item">Bolsos Transportadores Ergonómicos</span>
+                        <span class="pill-item">3 Pijamas Cómodas</span>
+                        <span class="pill-item">1 Bata de Baño Absorbente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 4 -->
+            <div class="module-card">
+                <div class="module-img-box">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Accesorios y zapatitos de perros">
+                    <div class="module-tag">11 Moldes Incluidos</div>
+                </div>
+                <div class="module-content">
+                    <h3>🤠 4. Accesorios, Arneses y Calzado Boutique</h3>
+                    <p>Aprovecha al máximo cada retazo sobrante de tela creando accesorios de alta demanda y venta rápida.</p>
+                    <div class="module-pill-list">
+                        <span class="pill-item">3 Arneses Antijalones</span>
+                        <span class="pill-item">2 Zapatitos/Zapatillas de Tela</span>
+                        <span class="pill-item">2 Gorras con Apertura de Orejas</span>
+                        <span class="pill-item">Bandana</span>
+                        <span class="pill-item">Bozal Anatómico</span>
+                        <span class="pill-item">Pantalón y Calzón Sanitario</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 5 -->
+            <div class="module-card">
+                <div class="module-img-box">
+                    <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=800&q=80" alt="Disfraces para perro">
+                    <div class="module-tag">6 Moldes Virales</div>
+                </div>
+                <div class="module-content">
+                    <h3>🎭 5. Disfraces Temáticos para Fiestas</h3>
+                    <p>Confecciona disfraces espectaculares para la época de más altas ventas del año (Halloween, Navidad y eventos).</p>
+                    <div class="module-pill-list">
+                        <span class="pill-item">Disfraz de Murciélago</span>
+                        <span class="pill-item">Brujita</span>
+                        <span class="pill-item">Trajes de Chef</span>
+                        <span class="pill-item">Personajes Famosos</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BARRA DE ESTADÍSTICAS -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Moldes y Variaciones</div>
+                </div>
+                <div>
+                    <div class="stat-number">71</div>
+                    <div class="stat-label">Patrones Base Digitales</div>
+                </div>
+                <div>
+                    <div class="stat-number">XS a XXL</div>
+                    <div class="stat-label">Escalado Completo de Tallas</div>
+                </div>
+                <div>
+                    <div class="stat-number">$0.40 USD</div>
+                    <div class="stat-label">Costo promedio por patrón</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROCESO DE IMPRESIÓN -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo Funciona? Tan Fácil como 1, 2, 3</h2>
+                <p class="section-subtitle">No necesitas conocimientos de diseño ni programas complejos:</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-num">1</div>
+                    <h4>Descarga los Archivos PDF</h4>
+                    <p>Inmediatamente tras tu pago, recibes el acceso a tu carpeta digital en tu correo electrónico.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">2</div>
+                    <h4>Imprime en Casa (A4/Carta)</h4>
+                    <p>Imprime al 100% de escala en tu impresora normal. Cada molde indica las hojas a unir.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">3</div>
+                    <h4>Corta la Tela y ¡A Coser!</h4>
+                    <p>Sigue el talle marcado (XS a XXL) y ensambla la prenda usando la guía técnica incluida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BONOS EXCLUSIVOS -->
+    <section class="bonus-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎁 Bonos Exclusivos de Regalo Incluidos</h2>
+                <p class="section-subtitle">Si aseguras tu pack hoy durante el lanzamiento, recibes estos 3 regalos sin costo adicional:</p>
+            </div>
+
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <span class="bonus-badge">GRATIS HOY</span>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=500&q=80" alt="Peluche de tela de hueso para perro" class="bonus-img">
+                        <h3>BONO 1: Moldes de Juguetes Interactivos</h3>
+                        <p style="font-size:0.88rem; color:var(--text-muted);">Patrones en PDF para elaborar Juguete de Hueso Bordado y Pelota de Tela suave con retazos.</p>
+                    </div>
+                    <div class="bonus-value">Valor Comercial: $12.00 USD (GRATIS)</div>
+                </div>
+
+                <div class="bonus-card">
+                    <span class="bonus-badge">GRATIS HOY</span>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=500&q=80" alt="Tomando medidas a un perro" class="bonus-img">
+                        <h3>BONO 2: Guía Técnica de Mediciones</h3>
+                        <p style="font-size:0.88rem; color:var(--text-muted);">Aprende a tomar las medidas exactas de cuello, lomo y tórax a cualquier raza de perro.</p>
+                    </div>
+                    <div class="bonus-value">Valor Comercial: $15.00 USD (GRATIS)</div>
+                </div>
+
+                <div class="bonus-card">
+                    <span class="bonus-badge">GRATIS HOY</span>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80" alt="Patrones impresos en papel" class="bonus-img">
+                        <h3>BONO 3: Manual de Impresión Sin Escalado</h3>
+                        <p style="font-size:0.88rem; color:var(--text-muted);">Manual paso a paso para configurar tu impresora en hoja A4/Carta al 100% sin distorsiones.</p>
+                    </div>
+                    <div class="bonus-value">Valor Comercial: $10.00 USD (GRATIS)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS FOTOGRÁFICOS Y PRUEBA SOCIAL REAL -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge-pill" style="margin:0 auto 12px auto;">📸 Historias de Éxito & Fotografías Reales</span>
+                <h2 class="section-title">Resultados Reales de Quiénes Ya Tomaron la Decisión</h2>
+                <p class="section-subtitle">Conoce las historias de amor, protección y emprendimiento de dueñas de mascotas y creadoras que no dejaron pasar esta oportunidad:</p>
+            </div>
+
+            <!-- GRID DE TESTIMONIOS CON FOTOS REALES -->
+            <div class="photo-testimonials-grid">
+                
+                <!-- TESTIMONIO 1: PROTECCIÓN TÉRMICA Y FRÍO -->
+                <div class="photo-testimonial-card">
+                    <div class="testimonial-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Perrito feliz abrigado en la nieve/frío">
+                        <span class="testimonial-tag-badge">❄️ Protección Necesaria en Días Fríos</span>
+                        <span class="testimonial-verified-badge">✓ Compra Verificada</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <div>
+                            <div class="testimonial-header-info">
+                                <div class="author-details">
+                                    <h4>Camila V. y "Bruno" 🐶</h4>
+                                    <span>Santiago, Chile</span>
+                                </div>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="quote-box">
+                                "En mi ciudad hace un frío tremendo en las mañanas y Bruno sufría muchísimo de temblores. Los abrigos de las tiendas o eran carísimos o le apretaban el pecho. Le cosí este chaleco acolchado con el molde talle L del megapack en solo 2 horas. Le quedó EXACTO. Ahora sale a pasear feliz y bien calentito."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO 2: EMPRENDEDORA / PEQUEÑO NEGOCIO -->
+                <div class="photo-testimonial-card">
+                    <div class="testimonial-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Emprendedora con su pequeño negocio de ropa de mascota">
+                        <span class="testimonial-tag-badge">💼 De Pasatiempo a Negocio Rentable</span>
+                        <span class="testimonial-verified-badge">🚀 Emprendedora Activa</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <div>
+                            <div class="testimonial-header-info">
+                                <div class="author-details">
+                                    <h4>Sofía M. - Fundadora de "Patitas Elegantes"</h4>
+                                    <span>Puntarenas, Costa Rica</span>
+                                </div>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="quote-box">
+                                "¡La mejor inversión de mi vida! Estaba desempleada y tenía miedo de invertir. Compré el megapack por $29 y en mi primera semana confeccioné 15 impermeables usando retazos. Los vendí todos por Instagram a $18 cada uno. ¡Recuperé mi inversión multiplicado por 9 el primer mes! No lo piensen más."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO 3: CONFORT Y CONFORT EN CASA -->
+                <div class="photo-testimonial-card">
+                    <div class="testimonial-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80" alt="Perrito durmiendo cómodamente en pijama">
+                        <span class="testimonial-tag-badge">💤 Confort & Ajuste Ergonómico</span>
+                        <span class="testimonial-verified-badge">✓ Compra Verificada</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <div>
+                            <div class="testimonial-header-info">
+                                <div class="author-details">
+                                    <h4>Lucía P. y "Milo" 🐾</h4>
+                                    <span>Medellín, Colombia</span>
+                                </div>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="quote-box">
+                                "Milo es un mestizo de tórax ancho y nunca le quedaba nada bien. Con el molde de pijama del módulo 3 fue súper fácil ajustar la tiro y la sisa. Miren lo cómodo y relajado que duerme en las noches. Además, el bono de impresión A4 me ahorró todo el dolor de cabeza."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO 4: BOUTIQUE CANINA / TALLER -->
+                <div class="photo-testimonial-card">
+                    <div class="testimonial-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80" alt="Colección de prendas de perro terminadas en taller">
+                        <span class="testimonial-tag-badge">🧵 Producción en Serie Fácil</span>
+                        <span class="testimonial-verified-badge">🌟 Taller de Costura</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <div>
+                            <div class="testimonial-header-info">
+                                <div class="author-details">
+                                    <h4>Mariana & Elena G.</h4>
+                                    <span>Mendoza, Argentina</span>
+                                </div>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="quote-box">
+                                "Teníamos máquinas de coser paradas en casa. Descargamos los moldes en PDF, los imprimimos en nuestra impresora casera y armamos nuestro primer catálogo de 30 prendas. La cama antiestrés y el bolso transportador son los productos más vendidos de nuestra tienda."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BANNER CON GATILLO MENTAL DE OPORTUNIDAD Y ACCIÓN INMEDIATA -->
+            <div class="opportunity-trigger-box">
+                <h3>⚡ El Mercado de Mascotas no Espera: ¿Vas a Dejar Pasar Esta Oportunidad?</h3>
+                <p>
+                    Mientras lees esto, miles de dueños están buscando ropa única, abrigada y cómoda para sus consentidos. En lugar de gastar entre $15 y $30 por una sola prenda comprada en tienda, hoy puedes obtener el conocimiento y los patrones para <strong>confeccionar más de 200 modelos</strong> por solo $29 USD total.
+                </p>
+                <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=GCka8&qty%5BGCka8%5D=1" target="_blank" rel="noopener noreferrer" class="btn-cta" onclick="redirectToPayhip(event)">
+                    👉 ¡SÍ! QUIERO EL MEGAPACK Y EMPEZAR HOY MISMO ($29 USD)
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PRECIO Y OFERTA PRINCIPAL -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="offer-box">
+                <span class="offer-header-badge">🔥 OFERTA ESPECIAL DE LANZAMIENTO (80% OFF)</span>
+                <h2 style="font-size:2rem; color:var(--dark);">Megapack Emprendedor de Moda Canina</h2>
+                <p style="color:var(--text-muted); font-size:1rem;">Acceso Inmediato a los 200 Moldes + 71 Patrones Base + 3 Bonos Exclusivos</p>
+
+                <div class="main-usd-price">$29 USD</div>
+                <div class="sub-local-price">(Aproximadamente ₡15,000 Colones)</div>
+                <div class="price-calculation">¡A solo $0.40 USD / ₡215 colones por cada patrón profesional!</div>
+
+                <ul class="offer-checklist">
+                    <li><span class="check">✓</span> 71 Patrones Base Digitales en Formato PDF</li>
+                    <li><span class="check">✓</span> Rango Completo de Tallas: XS, S, M, L, XL y XXL</li>
+                    <li><span class="check">✓</span> Moldes de Camas Antiestrés y Bolsos de Viaje</li>
+                    <li><span class="check">✓</span> Bono 1: Moldes de Juguetes (Hueso y Pelota de Tela)</li>
+                    <li><span class="check">✓</span> Bono 2: Guía Técnica de Mediciones y Talles</li>
+                    <li><span class="check">✓</span> Bono 3: Manual de Impresión Paso a Paso</li>
+                    <li><span class="check">✓</span> Descarga Directa e Inmediata a tu Correo</li>
+                </ul>
+
+                <!-- BOTÓN PRINCIPAL DE COMPRA -->
+                <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=GCka8&qty%5BGCka8%5D=1" target="_blank" rel="noopener noreferrer" class="btn-cta" style="width:100%; max-width:100%;" onclick="redirectToPayhip(event)">
+                    🛒 ¡COMPRAR Y DESCARGAR AHORA POR $29 USD!
+                </a>
+
+                <p style="font-size:0.82rem; color:var(--text-muted); margin-top:16px;">
+                    💳 Pago 100% seguro y procesado mediante <strong>PayPal y Payhip</strong>.<br>
+                    Recibirás tu correo con los enlaces de descarga al instante.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Aclaramos todas tus dudas antes de realizar la compra:</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">1. ¿Cómo recibo los moldes después de realizar mi pago?</div>
+                    <div class="faq-answer">La descarga es automática e inmediata. Tan pronto como completes tu pago a través del enlace de Payhip/PayPal, serás redirigida a la página de descarga y recibirás un correo electrónico con tus enlaces directos a las carpetas en PDF.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">2. ¿En qué papel debo imprimir los patrones?</div>
+                    <div class="faq-answer">Los moldes están formateados para imprimirse en impresoras normales de hogar u oficina usando papel común de tamaño A4 o Carta. Solo debes imprimir al 100% de escala y unir las hojas según las marcas guía.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">3. ¿Necesito ser experta en costura para usar estos moldes?</div>
+                    <div class="faq-answer">No. Los patrones vienen acompañados de esquemas visuales e instrucciones claras. Encontrarás diseños súper fáciles para principantes hasta piezas con mejores acabados.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">4. ¿Puedo comercializar las prendas físicas que elabore con estos moldes?</div>
+                    <div class="faq-answer">¡Totalmente sí! Tienes derecho completo de confeccionar y vender todas las prendas físicas que desees en tu boutique, tienda de mascotas o redes sociales.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA FLOTANTE -->
+    <div class="floating-cta-bar">
+        <div class="floating-info">
+            <div class="floating-price">$29 USD <span style="font-size:0.75rem; color:#94A3B8;">(~₡15,000)</span></div>
+            <div class="floating-sub">71 Patrones Base + 3 Bonos Gratis</div>
+        </div>
+        <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=GCka8&qty%5BGCka8%5D=1" target="_blank" rel="noopener noreferrer" class="floating-btn" onclick="redirectToPayhip(event)">
+            🛒 ¡Comprar Ahora por $29 USD!
+        </a>
+    </div>
+
+    <!-- GLOBO DE CHAT WHATSAPP -->
+    <a href="https://wa.link/6b9cuo" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="¿Tienes dudas? Escríbenos por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18.1-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18.1-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+        <span class="whatsapp-text">¿Dudas? Chatea con nosotros</span>
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Megapack Emprendedor de Mascotas. Todos los derechos reservados.</p>
+            <p style="font-size:0.75rem; margin-top:6px;">Este sitio no forma parte de Facebook, Meta o PayPal Inc. Todas las marcas son propiedad de sus respectivos dueños.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT DIRECT LINK REDIRECTOR -->
+    <script>
+        function redirectToPayhip(e) {
+            const targetUrl = "https://payhip.com/buy?s=1&cart_links%5B%5D=GCka8&qty%5BGCka8%5D=1";
+            window.open(targetUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
