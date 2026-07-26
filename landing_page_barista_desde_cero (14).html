@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barista Desde Cero | Domina el Café Gourmet en Casa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: '#1E110A',
+                        espressolight: '#2A1A10',
+                        crema: '#FDFBF7',
+                        ambergold: '#C87D55',
+                        caramel: '#E67E22',
+                        caramelhover: '#D35400',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-gold {
+            background: linear-gradient(135deg, #E67E22 0%, #F39C12 100%);
+        }
+        .gradient-gold:hover {
+            background: linear-gradient(135deg, #D35400 0%, #E67E22 100%);
+        }
+        .bg-coffee-pattern {
+            background-color: #1E110A;
+            background-image: radial-gradient(#3a2215 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(230, 126, 34, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans bg-crema text-slate-800 antialiased selection:bg-caramel selection:text-white">
+
+    <!-- BARRA SUPERIOR DE URGENCIA -->
+    <div class="bg-gradient-to-r from-amber-700 via-caramel to-amber-600 text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center sticky top-0 z-40 shadow-md flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-current animate-bounce text-yellow-300"></i>
+        <span>⚡ <strong>OFERTA EXCLUSIVA DE LANZAMIENTO:</strong> Libro Digital + 3 Bonos de Regalo disponibles hoy.</span>
+    </div>
+
+    <!-- SECCIÓN MICRONICHO / A QUIÉN VA DIRIGIDO -->
+    <div class="bg-espressolight border-b border-amber-900/40 text-amber-100/90 py-3 px-4 text-xs md:text-sm text-center">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-caramel"></i> Para amantes del café que gastan $100-$200/mes en cafeterías</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-caramel"></i> Sin máquinas costosas (Aprovecha lo que ya tienes en tu cocina)</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-caramel"></i> Opción Emprendimiento: Negocio rentable desde casa con +70% ganancia</span>
+        </div>
+    </div>
+
+    <!-- 1. ENCABEZADO (HERO SECTION) -->
+    <header class="bg-coffee-pattern text-white pt-10 pb-16 md:pt-16 md:pb-24 px-4 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-caramel/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="inline-flex items-center gap-2 bg-amber-950/80 border border-amber-700/50 text-amber-300 text-xs md:text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm shadow-inner">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i> El Método Garantizado "Barista Desde Cero"
+                </span>
+                
+                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white mb-6">
+                    Descubre el <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-caramel text-glow">"Efecto Barista en Casa"</span>: Prepara +40 Bebidas Cremosas Gourmet Usando la Misma Cafetera de Tu Cocina
+                </h1>
+                
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light mb-8 max-w-2xl mx-auto">
+                    La guía paso a paso para transformar un café común en creaciones espectaculares: domina la extracción sin amargor, emulsiona leche ultra cremosa sin vaporizador y disfruta del verdadero café de especialidad pagando solo <strong class="text-amber-300 font-semibold">$0.30 por taza</strong>.
+                </p>
+
+                <!-- HERO EXPLORE BUTTON (SCROLLS TO VALUE SECTION) -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#metodo" class="gradient-gold text-white font-extrabold text-base py-4 px-8 rounded-2xl shadow-xl shadow-caramel/30 flex items-center justify-center gap-3 transition-all duration-300 transform hover:-translate-y-1 text-center w-full sm:w-auto">
+                        <i data-lucide="coffee" class="w-5 h-5"></i>
+                        <span>CONOCER EL MÉTODO Y RECETAS</span>
+                    </a>
+                    <a href="#recetario" class="bg-espressolight/80 hover:bg-espressolight text-amber-200 font-semibold text-base py-4 px-8 rounded-2xl border border-amber-700/50 flex items-center justify-center gap-2 transition-all w-full sm:w-auto">
+                        <i data-lucide="book-open" class="w-5 h-5 text-caramel"></i>
+                        <span>VER LO QUE APRENDERÁS</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- HERO EXQUISITE IMAGE DISPLAY -->
+            <div class="max-w-4xl mx-auto bg-espressolight/90 p-4 md:p-6 rounded-3xl border border-amber-700/50 backdrop-blur-sm shadow-2xl relative">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-700/30 group">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1200&auto=format&fit=crop" alt="Cappuccino Cremoso Arte Latte Barista" class="w-full h-[320px] sm:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-espresso via-transparent to-transparent opacity-90"></div>
+                    
+                    <div class="absolute bottom-6 left-6 right-6 bg-espresso/90 backdrop-blur-md p-4 rounded-2xl border border-amber-600/40 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-caramel/20 flex items-center justify-center shrink-0 border border-caramel/40">
+                                <i data-lucide="book-open" class="w-6 h-6 text-amber-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-amber-200 font-medium">Ebook Interactivo + 3 Bonos Exclusivos</p>
+                                <p class="text-sm font-bold text-white">Formato PDF HD Descargable e Imprimible</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1 text-amber-400 text-xs font-semibold bg-amber-950/80 px-3 py-1.5 rounded-full border border-amber-800">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <span>4.9/5 valoración por +1,400 alumnos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. SECCIÓN DE PROBLEMA Y AGITACIÓN -->
+    <section id="metodo" class="py-16 md:py-24 px-4 bg-crema">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-xs uppercase tracking-widest text-amber-800 font-bold mb-2">Puntos de Dolor Frecuentes</h2>
+                <h3 class="font-serif text-3xl md:text-4xl font-bold text-espresso mb-4">
+                    ¿Te Apasiona el Buen Café pero Te Frustra No Lograr el Mismo Sabor Gourmet en Casa?
+                </h3>
+                <p class="text-slate-600 text-base md:text-lg">
+                    Lee esto si estás cansado de comprometer la calidad de tu primera taza de la mañana y de tirar tu dinero a la basura.
+                </p>
+            </div>
+
+            <!-- PAIN POINTS GRID -->
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-14">
+                <div class="bg-white p-6 md:p-8 rounded-2xl border border-amber-200/60 shadow-sm hover:shadow-md transition-shadow flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="frown" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-espresso mb-2">El Café te sale Amargo, Agrio o "Aguado"</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Compras granos costosos creyendo que mejorará, pero al prepararlo en tu cafetera de siempre el sabor termina siendo áspero, quemado o sin ningún aroma apetecible.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl border border-amber-200/60 shadow-sm hover:shadow-md transition-shadow flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="circle-dollar-sign" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-espresso mb-2">Gastas una Fortuna Invisible en Cafeterías</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Gastar $4, $5 o $6 diarios en un latte o frappé parece poco, pero al mes estás regalando más de <strong>$150 USD</strong> en cadenas comerciales por bebidas cargadas de azúcares artificiales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl border border-amber-200/60 shadow-sm hover:shadow-md transition-shadow flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="droplets" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-espresso mb-2">La Leche Espumada Siempre se te Desinfla</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Intentas batir la leche en casa pero a los 10 segundos queda convertida en agua tibia con burbujas gigantes en lugar de esa crema terciopelada y brillante de las redes sociales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl border border-amber-200/60 shadow-sm hover:shadow-md transition-shadow flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="ban" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-espresso mb-2">Crees que Necesitas Equipamiento de $600</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Sientes que para tomar café de calidad internacional estás obligado a comprar máquinas espresso gigantescas que ocupan media cocina y requieren un manual de ingeniería.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPARISON REVELATION CARD -->
+            <div class="bg-amber-900/10 rounded-3xl p-6 md:p-10 border border-amber-800/20 grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <span class="inline-block bg-amber-800 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">LA REVELACIÓN</span>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold text-espresso mb-3">El Arte del Buen Café No Está en la Máquina... Está en el Método.</h4>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                        Una vez que entiendes la regla del ratio agua/café, la temperatura exacta sin usar termómetro y cómo emulsionar leche con lo que ya tienes en tus cajones, tus cafés superarán a cualquier cafetería comercial.
+                    </p>
+                    <div class="flex items-center gap-3 text-espresso font-semibold text-sm bg-white p-3.5 rounded-xl border border-amber-200 shadow-sm">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-caramel fill-current"></i>
+                        <span>Disfruta el sabor gourmet pagando $0.30 por taza en lugar de $5.00 en la calle.</span>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-amber-300/50">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop" alt="Café helado artesanal Iced Spanish Latte" class="w-full h-72 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LA SOLUCIÓN Y PRESENTACIÓN DEL PRODUCTO -->
+    <section class="py-16 md:py-24 px-4 bg-espresso text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-950/80 px-4 py-1.5 rounded-full border border-amber-700/50">
+                    Presentamos Tu Solución Definitiva
+                </span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mt-4 mb-4">
+                    "Barista Desde Cero: El Gran Libro de Recetas y Guía del Barista en Casa"
+                </h2>
+                <p class="text-slate-300 text-base md:text-lg font-light">
+                    Un sistema probado y 100% práctico en formato PDF descargable diseñado para que cualquier persona —sin experiencia previa— aprenda a extraer el máximo aroma y sabor de cualquier grano de café.
+                </p>
+            </div>
+
+            <!-- FICHA TÉCNICA DEL PRODUCTO -->
+            <div class="bg-espressolight rounded-3xl p-6 md:p-10 border border-amber-800/40 shadow-2xl mb-12">
+                <h3 class="text-xl font-serif font-bold text-amber-300 mb-6 pb-4 border-b border-amber-900/60 flex items-center gap-2">
+                    <i data-lucide="clipboard-list" class="w-6 h-6 text-caramel"></i>
+                    Ficha Técnica del Producto (Lo que obtendrás)
+                </h3>
+
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-espresso/60 p-4 rounded-xl border border-amber-900/30">
+                        <p class="text-xs text-amber-400 font-semibold uppercase mb-1">Formato</p>
+                        <p class="font-bold text-white text-base">Libro Digital Interactivo (PDF HD)</p>
+                        <p class="text-xs text-slate-400 mt-1">Listo para ver en pantalla o imprimir.</p>
+                    </div>
+
+                    <div class="bg-espresso/60 p-4 rounded-xl border border-amber-900/30">
+                        <p class="text-xs text-amber-400 font-semibold uppercase mb-1">Compatibilidad</p>
+                        <p class="font-bold text-white text-base">Cualquier Dispositivo</p>
+                        <p class="text-xs text-slate-400 mt-1">Celular, Tablet, PC o E-reader.</p>
+                    </div>
+
+                    <div class="bg-espresso/60 p-4 rounded-xl border border-amber-900/30">
+                        <p class="text-xs text-amber-400 font-semibold uppercase mb-1">Contenido Recetario</p>
+                        <p class="font-bold text-white text-base">+40 Recetas Exclusivas</p>
+                        <p class="text-xs text-slate-400 mt-1">Guías paso a paso con proporciones exactas.</p>
+                    </div>
+
+                    <div class="bg-espresso/60 p-4 rounded-xl border border-amber-900/30">
+                        <p class="text-xs text-amber-400 font-semibold uppercase mb-1">Acceso</p>
+                        <p class="font-bold text-white text-base">De Por Vida</p>
+                        <p class="text-xs text-slate-400 mt-1">Un solo pago, tuyo para siempre.</p>
+                    </div>
+
+                    <div class="bg-espresso/60 p-4 rounded-xl border border-amber-900/30">
+                        <p class="text-xs text-amber-400 font-semibold uppercase mb-1">Entrega</p>
+                        <p class="font-bold text-white text-base">Inmediata e Instantánea</p>
+                        <p class="text-xs text-slate-400 mt-1">Llega a tu correo tras la compra.</p>
+                    </div>
+
+                    <div class="bg-espresso/60 p-4 rounded-xl border border-amber-900/30">
+                        <p class="text-xs text-amber-400 font-semibold uppercase mb-1">Soporte y Regalos</p>
+                        <p class="font-bold text-white text-base">3 Bonos de Regalo Incluidos</p>
+                        <p class="text-xs text-slate-400 mt-1">Plantillas, Checklist y Calendario.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MÓDULOS / CONTENIDO DETALLADO -->
+    <section id="recetario" class="py-16 md:py-24 px-4 bg-crema">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">Estructura del Ebook</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso mt-2 mb-4">
+                    Explora Todo lo que Aprenderás Dentro del Libro
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Diseñado en 5 módulos estratégicos de lectura rápida y aplicación práctica e inmediata.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- MÓDULO 1 -->
+                <div class="bg-white rounded-2xl p-6 md:p-8 border border-amber-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-amber-100">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-amber-900 text-amber-200 font-bold flex items-center justify-center shrink-0">M1</span>
+                            <h3 class="font-serif text-xl font-bold text-espresso">Adiós al Café de Cafetería: Los Fundamentos Caseros</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Módulo Básico</span>
+                    </div>
+                    <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>El Secreto del Ahorro Real:</strong> Cómo tomar café de especialidad por $0.30/taza.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>Diagnóstico Anti-Amargor:</strong> Corrige el sabor feo modificando la molienda.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>Moliendas al Tacto:</strong> Fina, media y gruesa explicadas fácil sin micras.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>La Regla de la Cuchara:</strong> Mide proporciones sin gastar en balanzas grameras.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>El Truco de los 60 Segundos:</strong> Controla la temperatura para no quemar el grano.</li>
+                    </ul>
+                </div>
+
+                <!-- MÓDULO 2 -->
+                <div class="bg-white rounded-2xl p-6 md:p-8 border border-amber-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-amber-100">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-amber-900 text-amber-200 font-bold flex items-center justify-center shrink-0">M2</span>
+                            <h3 class="font-serif text-xl font-bold text-espresso">Domina la Cafetera que Ya Tienes (¡y Kit por menos de 50€!)</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Técnica & Utensilios</span>
+                    </div>
+                    <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>Kit del Barista Inteligente:</strong> Las 3 herramientas esenciales de bajo costo.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>Extracción de Alto Rendimiento:</strong> Moka/Italiana, Prensa Francesa, Goteo y Cápsulas.</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-caramel shrink-0 mt-0.5"></i> <strong>3 Métodos de Espuma Cremosa:</strong> Microespuma sedosa usando utensilios comunes.</li>
+                    </ul>
+                </div>
+
+                <!-- MÓDULO 3 -->
+                <div class="bg-amber-950 text-white rounded-2xl p-6 md:p-8 border border-amber-800 shadow-xl">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-amber-800/80">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-caramel text-white font-bold flex items-center justify-center shrink-0">M3</span>
+                            <h3 class="font-serif text-xl font-bold text-amber-300">Recetario Maestro (+40 Recetas Exquisitas Paso a Paso)</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-caramel/20 text-amber-300 border border-caramel/40 px-3 py-1 rounded-full">El Núcleo del Libro</span>
+                    </div>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6 text-sm">
+                        <div class="bg-espresso/80 p-4 rounded-xl border border-amber-900/50">
+                            <h4 class="font-bold text-amber-400 mb-2 flex items-center gap-2"><i data-lucide="coffee" class="w-4 h-4"></i> Sección A - Infaltables (10 Recetas)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Concentrado Espresso, Cappuccino Cremoso, Café Latte, Flat White, Mocha Especial, Latte Macchiato en Capas, Cortado y más.</p>
+                        </div>
+
+                        <div class="bg-espresso/80 p-4 rounded-xl border border-amber-900/50">
+                            <h4 class="font-bold text-amber-400 mb-2 flex items-center gap-2"><i data-lucide="snowflake" class="w-4 h-4"></i> Sección B - Frías y Virales (10 Recetas)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Dalgona Coffee, Cold Brew Casero, Iced Spanish Latte, Espresso Tonic, Iced Caramel Macchiato Estilo Starbucks, Cold Foam.</p>
+                        </div>
+
+                        <div class="bg-espresso/80 p-4 rounded-xl border border-amber-900/50">
+                            <h4 class="font-bold text-amber-400 mb-2 flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4"></i> Sección C - Internacionales (10 Recetas)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Café Turco, Irish Coffee, Café Vienés, Café de Olla Mexicano con Canela, Café Bombón y Carajillo Moderno Agitado.</p>
+                        </div>
+
+                        <div class="bg-espresso/80 p-4 rounded-xl border border-amber-900/50">
+                            <h4 class="font-bold text-amber-400 mb-2 flex items-center gap-2"><i data-lucide="ice-cream-2" class="w-4 h-4"></i> Sección D - Postres & Caprichos (10 Recetas)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Affogato de Nutella, Café Caramelo Salado, Pumpkin Spice Latte, Gingerbread y Frappé de Galleta Oreo + Smoothie Energético Bonus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 4 Y 5 -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl p-6 border border-amber-200/80 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-lg bg-amber-900 text-amber-200 font-bold text-xs flex items-center justify-center">M4</span>
+                            <h3 class="font-serif font-bold text-espresso text-base">Guía Express para Emprender desde Casa</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-caramel shrink-0 mt-0.5"></i> Calculadora de costos por taza y margen del 70%.</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-caramel shrink-0 mt-0.5"></i> Las 5 bebidas más rentables para vender a domicilio.</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-caramel shrink-0 mt-0.5"></i> Presentación profesional en vasos transparentes PET.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border border-amber-200/80 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-lg bg-amber-900 text-amber-200 font-bold text-xs flex items-center justify-center">M5</span>
+                            <h3 class="font-serif font-bold text-espresso text-base">Tabla de Referencia Rápida</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-caramel shrink-0 mt-0.5"></i> Hoja de trucos en 5 segundos (molienda, proporciones, tiempos).</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-caramel shrink-0 mt-0.5"></i> Guía de diagnóstico instantáneo: "¿Por qué sabe feo mi café?".</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BONOS EXCLUSIVOS CON MOCKS REALES -->
+    <section class="py-16 md:py-24 px-4 bg-espressolight text-white relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-amber-500/30">
+                    ¡Regalos Incluidos Solo Por Hoy!
+                </span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mt-4 mb-4">
+                    3 Bonos Exclusivos Totalmente GRATIS
+                </h2>
+                <p class="text-slate-300 text-base">
+                    Si ordenas tu copia hoy, te llevarás de regalo este paquete complementario valorado en $61 USD.
+                </p>
+            </div>
+
+            <!-- BONUSES GRID WITH GRAPHIC CARDS -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- BONO 1 -->
+                <div class="bg-espresso/90 rounded-2xl overflow-hidden border border-amber-700/40 flex flex-col justify-between shadow-2xl group hover:border-caramel/70 transition-all">
+                    <div class="p-4 bg-amber-950/40 border-b border-amber-900/60 text-center">
+                        <div class="bg-crema p-3 rounded-xl shadow-inner text-espresso border border-amber-300/40 relative">
+                            <span class="absolute top-2 right-2 bg-amber-800 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">PDF</span>
+                            <div class="text-left space-y-1">
+                                <p class="font-serif font-bold text-xs text-amber-900 border-b border-amber-200 pb-1">Calendario 7 Días Barista</p>
+                                <div class="grid grid-cols-7 gap-1 text-[8px] text-slate-500 font-mono py-1">
+                                    <span class="bg-amber-100 p-0.5 text-center font-bold text-amber-900 rounded">D1</span>
+                                    <span class="bg-amber-100 p-0.5 text-center font-bold text-amber-900 rounded">D2</span>
+                                    <span class="bg-amber-100 p-0.5 text-center font-bold text-amber-900 rounded">D3</span>
+                                    <span class="bg-amber-100 p-0.5 text-center font-bold text-amber-900 rounded">D4</span>
+                                    <span class="bg-amber-100 p-0.5 text-center font-bold text-amber-900 rounded">D5</span>
+                                    <span class="bg-amber-100 p-0.5 text-center font-bold text-amber-900 rounded">D6</span>
+                                    <span class="bg-amber-100 p-0.5 text-center font-bold text-amber-900 rounded">D7</span>
+                                </div>
+                                <p class="text-[9px] text-slate-600 italic">Anatomía de Barista: 1 Técnica diaria paso a paso.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-caramel text-white text-xs font-extrabold px-3 py-1 rounded-md">BONO #1</span>
+                                <span class="text-xs text-slate-400 line-through">Valor: $19 USD</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-lg text-amber-300 mb-2">Calendario de 7 Días de Práctica Barista</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Rutina estructurada día por día para dominar la molienda, el filtrado y el vertido de crema en solo 1 semana.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-amber-900/60 flex items-center justify-between text-xs">
+                            <span class="text-emerald-400 font-bold flex items-center gap-1"><i data-lucide="gift" class="w-4 h-4"></i> HOY: GRATIS</span>
+                            <span class="text-slate-400">PDF Interactivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BONO 2 -->
+                <div class="bg-espresso/90 rounded-2xl overflow-hidden border border-amber-700/40 flex flex-col justify-between shadow-2xl group hover:border-caramel/70 transition-all">
+                    <div class="p-4 bg-amber-950/40 border-b border-amber-900/60 text-center">
+                        <div class="bg-crema p-3 rounded-xl shadow-inner text-espresso border border-amber-300/40 relative">
+                            <span class="absolute top-2 right-2 bg-amber-800 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">CHECKLIST</span>
+                            <div class="text-left space-y-1">
+                                <p class="font-serif font-bold text-xs text-amber-900 border-b border-amber-200 pb-1">Herramientas Barista Casa</p>
+                                <ul class="text-[9px] text-slate-700 space-y-1 pt-1">
+                                    <li class="flex items-center gap-1"><i data-lucide="check-square" class="w-3 h-3 text-caramel"></i> Prensa Francesa / Moka</li>
+                                    <li class="flex items-center gap-1"><i data-lucide="check-square" class="w-3 h-3 text-caramel"></i> Espumador de Varilla ($5)</li>
+                                    <li class="flex items-center gap-1"><i data-lucide="check-square" class="w-3 h-3 text-caramel"></i> Vasos Transparentes PET</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-caramel text-white text-xs font-extrabold px-3 py-1 rounded-md">BONO #2</span>
+                                <span class="text-xs text-slate-400 line-through">Valor: $15 USD</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-lg text-amber-300 mb-2">Checklist Interactivo: Herramientas del Barista</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Verifica qué utensilios ya tienes en casa y cuáles puedes conseguir por menos de $10 USD para armar tu estación perfecta.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-amber-900/60 flex items-center justify-between text-xs">
+                            <span class="text-emerald-400 font-bold flex items-center gap-1"><i data-lucide="gift" class="w-4 h-4"></i> HOY: GRATIS</span>
+                            <span class="text-slate-400">PDF Editable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BONO 3 -->
+                <div class="bg-espresso/90 rounded-2xl overflow-hidden border border-amber-700/40 flex flex-col justify-between shadow-2xl group hover:border-caramel/70 transition-all">
+                    <div class="p-4 bg-amber-950/40 border-b border-amber-900/60 text-center">
+                        <div class="bg-slate-900 p-3 rounded-xl shadow-inner text-amber-100 border border-amber-600/40 relative">
+                            <span class="absolute top-2 right-2 bg-caramel text-white text-[9px] font-bold px-1.5 py-0.5 rounded">EDITABLE</span>
+                            <div class="text-left space-y-1">
+                                <p class="font-serif font-bold text-xs text-amber-300 border-b border-amber-800 pb-1">Plantilla de Menú Barista</p>
+                                <div class="text-[9px] text-slate-300 space-y-1 pt-1">
+                                    <p>1. Cafés Calientes.......... $3.50</p>
+                                    <p>2. Iced Spanish Latte.... $4.50</p>
+                                    <p>3. Cold Brew Botella...... $5.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-caramel text-white text-xs font-extrabold px-3 py-1 rounded-md">BONO #3</span>
+                                <span class="text-xs text-slate-400 line-through">Valor: $27 USD</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-lg text-amber-300 mb-2">Plantilla Editable de Menú/Carta Barista</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Plantilla lista para personalizar con tus propias bebidas y precios. Ideal si deseas ofrecer catering o iniciar tu micronegocio.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-amber-900/60 flex items-center justify-between text-xs">
+                            <span class="text-emerald-400 font-bold flex items-center gap-1"><i data-lucide="gift" class="w-4 h-4"></i> HOY: GRATIS</span>
+                            <span class="text-slate-400">Plantilla Editable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE SUEÑOS HIPERREALISTAS (TRANSFORMACIÓN DE VIDA) -->
+    <section class="py-16 px-4 bg-crema border-t border-b border-amber-200">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">Transformación Real</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso mt-2 mb-3">
+                    Vive la Experiencia: Del Aficionado al Barista Exitoso
+                </h2>
+                <p class="text-slate-600 text-base">
+                    No importa si tu objetivo es disfrutar un café perfecto en tus mañanas o iniciar un pequeño emprendimiento rentable desde casa.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- CARD 1: EL HOBBYSTA EN CASA -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-amber-200/80 shadow-lg flex flex-col justify-between group hover:shadow-xl transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Persona disfrutando café casero profesional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 bg-amber-800 text-amber-100 text-xs font-bold px-3 py-1 rounded-full border border-amber-600/50">
+                            ☕ Para Disfrutar en Casa
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-serif font-bold text-xl text-espresso">"Monté mi pequeña marca de Cold Brew en botellas"</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Descubre cómo empacar bebidas frías virales en vasos transparentes PET o botellas de cristal, calcula tus costos exactos y vende con márgenes del 70% en reuniones o a domicilio.
+                        </p>
+                        <div class="pt-2 flex items-center gap-2 text-xs font-semibold text-caramel">
+                            <i data-lucide="trending-up" class="w-4 h-4"></i>
+                            <span>Aprende a monetizar tu pasión desde la cocina</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRUEBA SOCIAL / TESTIMONIOS -->
+    <section class="py-16 md:py-24 px-4 bg-crema">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">Historias Reales</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso mt-2 mb-4">
+                    Lo que Dicen Quienes Ya Probaron el "Efecto Barista en Casa"
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Mira los resultados de personas comunes que transformaron sus mañanas.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- TESTIMONIO 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-amber-200/70 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-slate-700 italic leading-relaxed">
+                            "Dejé de gastar $140 al mes en Starbucks y ahora mi café sabe MEJOR. Con el método de la Prensa Francesa para espumar la leche mis mañanas cambiaron por completo."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-amber-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-800 text-amber-200 font-bold flex items-center justify-center shrink-0">MR</div>
+                        <div>
+                            <p class="font-bold text-sm text-espresso">Mariana R., 31 años</p>
+                            <p class="text-xs text-slate-500">Amante del café en casa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-amber-200/70 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-slate-700 italic leading-relaxed">
+                            "Las tablas de diagnóstico de sabor me salvaron porque mi café siempre salía agrio. Solo con ajustar la molienda y el agua el cambio fue del cielo a la tierra."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-amber-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-800 text-amber-200 font-bold flex items-center justify-center shrink-0">CM</div>
+                        <div>
+                            <p class="font-bold text-sm text-espresso">Carlos M., 42 años</p>
+                            <p class="text-xs text-slate-500">Aficionado al Barismo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-amber-200/70 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-slate-700 italic leading-relaxed">
+                            "Comencé a vender Cold Brew embotellado los fines de semana. El módulo 4 de emprendimiento es oro puro. Aprendí a calcular costos por vaso rápidamente."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-amber-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-800 text-amber-200 font-bold flex items-center justify-center shrink-0">ST</div>
+                        <div>
+                            <p class="font-bold text-sm text-espresso">Sofía T., 26 años</p>
+                            <p class="text-xs text-slate-500">Emprendedora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONVERSACIONES REALES DE WHATSAPP -->
+    <section class="py-16 px-4 bg-espressolight/40 border-t border-b border-amber-800/30">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 bg-emerald-950/80 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full border border-emerald-700/50">
+                    <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Capturas de Pantalla Reales
+                </span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso mt-3 mb-2">
+                    Así Interactúan Nuestros Alumnos en WhatsApp
+                </h2>
+                <p class="text-slate-600 text-sm md:text-base">
+                    Resultados inmediatos compartidos en nuestro grupo y chat de soporte privado.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- CHAT 1 -->
+                <div class="bg-[#0b141a] rounded-2xl overflow-hidden border border-emerald-900/60 shadow-xl font-sans text-xs flex flex-col justify-between">
+                    <div class="bg-[#202c33] px-3.5 py-2.5 flex items-center justify-between border-b border-slate-700/40 text-white">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-full bg-amber-700 text-amber-100 font-bold flex items-center justify-center text-xs">LM</div>
+                            <div>
+                                <p class="font-semibold text-xs leading-none text-slate-100">Laura M. (Comunidad Barista)</p>
+                                <p class="text-[10px] text-emerald-400 font-normal mt-0.5">en línea</p>
+                            </div>
+                        </div>
+                        <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
+                    </div>
+                    <div class="p-3.5 space-y-3 bg-[radial-gradient(#1f2c34_1px,transparent_1px)] [background-size:16px_16px] bg-[#0b141a]">
+                        <div class="bg-[#005c4b] text-slate-100 p-2.5 rounded-2xl rounded-tr-none ml-auto max-w-[90%] space-y-2 shadow-sm border border-emerald-600/30">
+                            <div class="rounded-xl overflow-hidden border border-emerald-500/30">
+                                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=500&auto=format&fit=crop" alt="Cappuccino Casero" class="w-full h-36 object-cover">
+                            </div>
+                            <p class="text-[11px] leading-snug">
+                                ¡Profe miren mi cappuccino de hoy! ☕😍 Usé la técnica de espumado con la prensa francesa que enseñan en el Módulo 2 y quedó súper sedoso. ¡Pagué solo $0.30 por esto!
+                            </p>
+                            <div class="flex items-center justify-end gap-1 text-[9px] text-emerald-200/70">
+                                <span>10:42 AM</span>
+                                <i data-lucide="check-check" class="w-3 h-3 text-cyan-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2.5 bg-[#202c33] border-t border-slate-700/40 flex items-center gap-2 text-slate-400 text-[11px]">
+                        <i data-lucide="smile" class="w-4 h-4"></i>
+                        <span class="text-slate-500 flex-1">Mensaje...</span>
+                        <i data-lucide="send" class="w-4 h-4 text-emerald-500"></i>
+                    </div>
+                </div>
+
+                <!-- CHAT 2 -->
+                <div class="bg-[#0b141a] rounded-2xl overflow-hidden border border-emerald-900/60 shadow-xl font-sans text-xs flex flex-col justify-between">
+                    <div class="bg-[#202c33] px-3.5 py-2.5 flex items-center justify-between border-b border-slate-700/40 text-white">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-full bg-caramel text-white font-bold flex items-center justify-center text-xs">AG</div>
+                            <div>
+                                <p class="font-semibold text-xs leading-none text-slate-100">Andrés G.</p>
+                                <p class="text-[10px] text-emerald-400 font-normal mt-0.5">en línea</p>
+                            </div>
+                        </div>
+                        <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
+                    </div>
+                    <div class="p-3.5 space-y-3 bg-[radial-gradient(#1f2c34_1px,transparent_1px)] [background-size:16px_16px] bg-[#0b141a]">
+                        <div class="bg-[#005c4b] text-slate-100 p-2.5 rounded-2xl rounded-tr-none ml-auto max-w-[90%] space-y-2 shadow-sm border border-emerald-600/30">
+                            <div class="rounded-xl overflow-hidden border border-emerald-500/30">
+                                <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=500&auto=format&fit=crop" alt="Iced Caramel Latte" class="w-full h-36 object-cover">
+                            </div>
+                            <p class="text-[11px] leading-snug">
+                                Preparé el Iced Caramel Macchiato para mi novia y no podía creer que lo hice en la cocina en 3 min 🤤🔥 Las proporciones del recetario son exactas.
+                            </p>
+                            <div class="flex items-center justify-end gap-1 text-[9px] text-emerald-200/70">
+                                <span>2:15 PM</span>
+                                <i data-lucide="check-check" class="w-3 h-3 text-cyan-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2.5 bg-[#202c33] border-t border-slate-700/40 flex items-center gap-2 text-slate-400 text-[11px]">
+                        <i data-lucide="smile" class="w-4 h-4"></i>
+                        <span class="text-slate-500 flex-1">Mensaje...</span>
+                        <i data-lucide="send" class="w-4 h-4 text-emerald-500"></i>
+                    </div>
+                </div>
+
+                <!-- CHAT 3 -->
+                <div class="bg-[#0b141a] rounded-2xl overflow-hidden border border-emerald-900/60 shadow-xl font-sans text-xs flex flex-col justify-between">
+                    <div class="bg-[#202c33] px-3.5 py-2.5 flex items-center justify-between border-b border-slate-700/40 text-white">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-xs">VP</div>
+                            <div>
+                                <p class="font-semibold text-xs leading-none text-slate-100">Valeria P. (Cold Brew)</p>
+                                <p class="text-[10px] text-emerald-400 font-normal mt-0.5">hace 5 min</p>
+                            </div>
+                        </div>
+                        <i data-lucide="more-vertical" class="w-4 h-4 text-slate-400"></i>
+                    </div>
+                    <div class="p-3.5 space-y-3 bg-[radial-gradient(#1f2c34_1px,transparent_1px)] [background-size:16px_16px] bg-[#0b141a]">
+                        <div class="bg-[#005c4b] text-slate-100 p-2.5 rounded-2xl rounded-tr-none ml-auto max-w-[90%] space-y-2 shadow-sm border border-emerald-600/30">
+                            <div class="rounded-xl overflow-hidden border border-emerald-500/30">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=500&auto=format&fit=crop" alt="Cold Brew Embotellado" class="w-full h-36 object-cover">
+                            </div>
+                            <p class="text-[11px] leading-snug">
+                                ¡Hola! Quería compartirles que vendí mis primeras 18 botellas de Cold Brew este finde 🎉 El Módulo 4 de costos y presentación paga solo el libro en el primer día. ¡Gracias!!
+                            </p>
+                            <div class="flex items-center justify-end gap-1 text-[9px] text-emerald-200/70">
+                                <span>6:50 PM</span>
+                                <i data-lucide="check-check" class="w-3 h-3 text-cyan-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2.5 bg-[#202c33] border-t border-slate-700/40 flex items-center gap-2 text-slate-400 text-[11px]">
+                        <i data-lucide="smile" class="w-4 h-4"></i>
+                        <span class="text-slate-500 flex-1">Mensaje...</span>
+                        <i data-lucide="send" class="w-4 h-4 text-emerald-500"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PRECIO Y OFERTA INOBJETABLE -->
+                    <div class="px-5 pb-5 text-sm text-slate-600 hidden">
+                        <strong>¡Absolutamente NO!</strong> Todo el contenido está diseñado para que uses las cafeteras que ya tienes en casa (Moka/Italiana, Prensa Francesa, Goteo o Cápsulas) y utensilios comunes. Te enseñamos a lograr resultados gourmet optimizando la técnica, no gastando fortuna.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-amber-200/80 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-espresso flex justify-between items-center gap-4 focus:outline-none faq-toggle">
+                        <span>2. ¿Cómo recibo el producto después de realizar el pago?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-caramel transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-sm text-slate-600 hidden">
+                        El acceso es <strong>inmediato e instantáneo</strong>. Tan pronto como se complete tu pedido, recibirás un correo electrónico automático de Hotmart con el enlace directo para descargar el libro en PDF HD y todos los bonos en tu celular, tablet o computadora.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-amber-200/80 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-espresso flex justify-between items-center gap-4 focus:outline-none faq-toggle">
+                        <span>3. No sé nada de barismo, ¿este libro es adecuado para mí?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-caramel transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-sm text-slate-600 hidden">
+                        <strong>Es perfecto para ti.</strong> El libro fue escrito en un lenguaje simple, directo y sin tecnicismos difíciles. Vas a aprender desde cero absoluto, con instrucciones claras, proporciones en cucharas y tiempos medidos de forma sencilla.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-amber-200/80 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-espresso flex justify-between items-center gap-4 focus:outline-none faq-toggle">
+                        <span>4. ¿Qué pasa si vivo en un país con diferente moneda?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-caramel transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-sm text-slate-600 hidden">
+                        No te preocupes. Al hacer clic en el botón de compra, Hotmart detectará tu país automáticamente y te mostrará el precio equivalente en tu moneda local, junto con los métodos de pago disponibles en tu región (tarjetas de crédito, débito, transferencias o efectivo).
+                    </div>
+                </div>
+            </div>
+
+            <!-- FINAL CTA BUTTON -->
+            <div class="mt-16 text-center">
+                <a href="https://pay.hotmart.com/Y100186307M" target="_blank" class="gradient-gold text-white font-bold text-lg py-4 px-8 rounded-2xl shadow-xl shadow-caramel/25 inline-flex items-center gap-3 hover:-translate-y-0.5 transition-transform">
+                    <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                    <span>ACCEDER AL LIBRO DIGITAL Y BONOS POR $27 USD</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-espresso text-slate-400 py-10 px-4 text-xs border-t border-amber-900/40">
+        <div class="max-w-5xl mx-auto text-center space-y-3">
+            <p>© 2026 Academia Barista / Academia Virtual VIP. Todos los derechos reservados.</p>
+            <p class="text-slate-500 max-w-2xl mx-auto">
+                Este sitio no forma parte ni está respaldado por Facebook Inc., Meta Inc. o Google LLC. Hotmart es el comerciante autorizado de los productos de esta página.
+            </p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.link/yb5txr" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 group" aria-label="Contacto WhatsApp">
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-400"></span>
+        </span>
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-sm font-bold pl-0 group-hover:pl-2">
+            ¿Dudas? Chatea con nosotros
+        </span>
+    </a>
+
+    <!-- SCRIPTS INTERACTIVOS -->
+    <script>
+        lucide.createIcons();
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Countdown Timer (2 Horas 45 Minutos)
+        let totalSeconds = (2 * 3600) + (45 * 60) + 12;
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        setInterval(() => {
+            if (totalSeconds > 0) {
+                totalSeconds--;
+                const h = Math.floor(totalSeconds / 3600);
+                const m = Math.floor((totalSeconds % 3600) / 60);
+                const s = totalSeconds % 60;
+
+                if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+                if (minutesEl) minutesEl.textContent = String(m).padStart(2, '0');
+                if (secondsEl) secondsEl.textContent = String(s).padStart(2, '0');
+            }
+        }, 1000);
+
+        // GEMINI AI INTEGRATION
+        function switchAiTab(tabName) {
+            document.querySelectorAll('.ai-tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.ai-tab-btn').forEach(btn => {
+                btn.classList.remove('active-ai-tab', 'text-amber-300', 'bg-espressolight/60', 'border-caramel');
+                btn.classList.add('text-slate-400', 'border-transparent');
+            });
+
+            document.getElementById(`ai-tab-${tabName}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+            activeBtn.classList.add('active-ai-tab', 'text-amber-300', 'bg-espressolight/60', 'border-caramel');
+            activeBtn.classList.remove('text-slate-400', 'border-transparent');
+        }
+
+        async function fetchWithRetry(url, options, maxRetries = 3) {
+            let delay = 1000;
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.ok) return await response.json();
+                    if (response.status === 429 || response.status >= 500) {
+                        await new Promise(res => setTimeout(res, delay));
+                        delay *= 2;
+                        continue;
+                    }
+                    throw new Error(`Error HTTP ${response.status}`);
+                } catch (err) {
+                    if (i === maxRetries - 1) throw err;
+                    await new Promise(res => setTimeout(res, delay));
+                    delay *= 2;
+                }
+            }
+        }
+
+        // 1. CHAT BARISTA
+        function setChatPrompt(text) {
+            document.getElementById('ai-chat-input').value = text;
+        }
+
+        async function askBaristaChat() {
+            const prompt = document.getElementById('ai-chat-input').value.trim();
+            if (!prompt) return;
+
+            const btn = document.getElementById('ai-chat-submit');
+            const outputDiv = document.getElementById('ai-chat-output');
+            const textDiv = document.getElementById('ai-chat-text');
+
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Consultando...`;
+            lucide.createIcons();
+
+            outputDiv.classList.remove('hidden');
+            textDiv.innerText = "Pensando la mejor solución técnica para tu café...";
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const systemPrompt = "Eres el Maestro Barista de 'Barista Desde Cero'. Responde con tono experto, cercano y práctico. Enfócate en cómo preparar café gourmet en casa sin máquinas caras. Máximo 3 párrafos breves.";
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] }
+            };
+
+            try {
+                const result = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const reply = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                textDiv.innerText = reply || "No se pudo obtener una respuesta en este momento.";
+            } catch (err) {
+                textDiv.innerText = "Ocurrió un error al conectar con el servidor. Intenta de nuevo.";
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="send" class="w-4 h-4"></i> Preguntar`;
+                lucide.createIcons();
+            }
+        }
+
+        // 2. RECIPE CREATOR
+        async function generateCustomRecipe() {
+            const equip = document.getElementById('recipe-equipment').value;
+            const style = document.getElementById('recipe-style').value;
+            const ingredients = document.getElementById('recipe-ingredients').value || "leche y azúcar/miel";
+
+            const btn = document.getElementById('ai-recipe-submit');
+            const outDiv = document.getElementById('ai-recipe-output');
+            const titleOut = document.getElementById('recipe-title-out');
+            const stepsOut = document.getElementById('recipe-steps-out');
+
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Creando tu receta...`;
+            lucide.createIcons();
+
+            outDiv.classList.remove('hidden');
+            titleOut.innerText = "⏳ Diseñando Receta Única...";
+            stepsOut.innerText = "Generando pasos exactos...";
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const prompt = `Crea una receta gourmet de café usando "${equip}", estilo "${style}" e ingredientes "${ingredients}". Devuelve JSON con "nombre" (string) y "pasos" (array de cadenas de texto).`;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            nombre: { type: "STRING" },
+                            pasos: { type: "ARRAY", items: { type: "STRING" } }
+                        },
+                        propertyOrdering: ["nombre", "pasos"]
+                    }
+                }
+            };
+
+            try {
+                const result = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const jsonStr = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (jsonStr) {
+                    const parsed = JSON.parse(jsonStr);
+                    titleOut.innerText = `☕ ${parsed.nombre}`;
+                    stepsOut.innerHTML = parsed.pasos.map((s, idx) => `<p><strong>Paso ${idx+1}:</strong> ${s}</p>`).join('');
+                }
+            } catch (err) {
+                titleOut.innerText = "Error";
+                stepsOut.innerText = "No se pudo generar la receta en este momento.";
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4"></i> GENERAR RECETA PASO A PASO CON IA`;
+                lucide.createIcons();
+            }
+        }
+
+        // 3. DOCTOR CAFÉ
+        async function diagnoseCoffee(problem) {
+            const outDiv = document.getElementById('ai-doctor-output');
+            const textOut = document.getElementById('ai-doctor-text');
+
+            outDiv.classList.remove('hidden');
+            textOut.innerText = "Diagnosticando la extracción...";
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const prompt = `El usuario dice: "${problem}". Ofrece un diagnóstico técnico rápido en 3 puntos: 1) Causa, 2) Arreglo inmediato en la taza, 3) Ajuste para la próxima vez.`;
+
+            const payload = { contents: [{ parts: [{ text: prompt }] }] };
+
+            try {
+                const result = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                textOut.innerText = result?.candidates?.[0]?.content?.parts?.[0]?.text || "No se pudo generar el diagnóstico.";
+            } catch (err) {
+                textOut.innerText = "Error al conectar con la IA de diagnóstico.";
+            }
+        }
+    </script>
+</body>
+</html>
