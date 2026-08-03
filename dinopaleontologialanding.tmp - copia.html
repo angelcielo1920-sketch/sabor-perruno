@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnico Auxiliar en Arqueología, Antropología y Paleontología</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                        },
+                        stone: {
+                            850: '#211d1a',
+                            900: '#1c1917',
+                            950: '#0c0a09',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to bottom, rgba(12, 10, 9, 0.8), rgba(12, 10, 9, 0.95)), url('https://images.unsplash.com/photo-1544967082-d9d25d827d62?q=80&w=2000&auto=format&fit=crop')",
+                        'expedition-pattern': "linear-gradient(to right, rgba(12, 10, 9, 0.94), rgba(12, 10, 9, 0.88)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1800&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            border-image: linear-gradient(to bottom right, #f59e0b, #78350f) 1;
+        }
+        .pulse-glow {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.35);
+        }
+        .glass-panel {
+            background: rgba(28, 25, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+        .img-zoom-hover {
+            transition: transform 0.5s ease;
+        }
+        .img-zoom-hover:hover {
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-100 font-sans antialiased selection:bg-amber-500 selection:text-stone-950 pb-20 md:pb-0">
+
+    <!-- TOP ANNOUNCEMENT BAR (Gatillo de Escasez y Urgencia) -->
+    <div id="top-bar" class="bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 text-stone-950 text-xs sm:text-sm font-bold py-2.5 px-4 text-center sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="bg-stone-950 text-amber-400 px-2.5 py-0.5 rounded-md text-xs uppercase tracking-wider animate-pulse">¡Inscripciones Abiertas!</span>
+                <span>🔥 Oportunidad Única: <strong>Descuento Especial con Cupos Limitados</strong></span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1 font-mono text-stone-950 font-extrabold bg-stone-900/20 px-2 py-1 rounded">
+                    <i class="fa-solid fa-clock text-stone-950 mr-1"></i>
+                    <span id="timer-hours">02</span>:<span id="timer-minutes">14</span>:<span id="timer-seconds">35</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HERO SECTION (PASO 1: Titular & PASO 2: Promesa Principal) -->
+    <header class="relative bg-hero-pattern bg-cover bg-center min-h-[85vh] flex items-center pt-10 pb-16 px-4 border-b border-amber-900/30">
+        <div class="max-w-6xl mx-auto text-center relative z-10 space-y-6">
+            
+            <!-- Category Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                <i class="fa-solid fa-compass text-amber-500"></i> Programa Técnico Online con Certificación Internacional
+            </div>
+
+            <!-- PASO 1: TITULAR -->
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-100 leading-tight max-w-5xl mx-auto">
+                ¿Sientes la vocación de <span class="gold-gradient-text">desenterrar la historia</span> y trabajar en verdaderas expediciones del pasado?
+            </h1>
+
+            <!-- PASO 2: PROMESA PRINCIPAL -->
+            <p class="text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto font-normal leading-relaxed">
+                Aprende las metodologías prácticas de <strong class="text-amber-400 font-semibold">Arqueología de Campo, Análisis Antropológico y Paleontología</strong>. Avanza rápido, domina la prospección y obtén tu titulación internacional en solo 90 días.
+            </p>
+
+            <!-- Primary CTA Options -->
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+                <a href="#oferta" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-400 hover:to-amber-600 text-stone-950 font-extrabold text-base rounded-xl shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>VER PLAN EN CUOTAS</span>
+                </a>
+                <a href="#oferta" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-6 py-4 bg-stone-800 hover:bg-stone-700 text-amber-300 border border-amber-500/40 font-bold text-base rounded-xl shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>VER PAGO ÚNICO</span>
+                </a>
+            </div>
+            <p class="text-xs text-stone-400 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i> Garantía incondicional de 7 días • Matrícula Inmediata
+            </p>
+
+        </div>
+    </header>
+
+    <!-- VISUAL GALLERY SHOWCASE -->
+    <section class="py-12 bg-stone-950 border-b border-stone-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                
+                <!-- Archeology Card -->
+                <div class="group relative rounded-2xl overflow-hidden border border-amber-500/20 shadow-lg aspect-square">
+                    <img src="https://i.postimg.cc/x1L4PFdt/Excavacion-Estratigrafia.jpg" alt="Excavación y Estratigrafía Arqueológica" class="w-full h-full object-cover img-zoom-hover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 right-3">
+                        <span class="text-[10px] font-extrabold uppercase bg-amber-500 text-stone-950 px-2 py-0.5 rounded">Arqueología</span>
+                        <h4 class="text-sm font-bold text-stone-100 mt-1">Excavación & Estratigrafía</h4>
+                    </div>
+                </div>
+
+                <!-- Paleontology Card -->
+                <div class="group relative rounded-2xl overflow-hidden border border-amber-500/20 shadow-lg aspect-square">
+                    <img src="https://i.postimg.cc/fRYrvgbC/Identificacion-Fosil.webp" alt="Hallazgo y Paleontología Identificación Fósil" class="w-full h-full object-cover img-zoom-hover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 right-3">
+                        <span class="text-[10px] font-extrabold uppercase bg-amber-500 text-stone-950 px-2 py-0.5 rounded">Paleontología</span>
+                        <h4 class="text-sm font-bold text-stone-100 mt-1">Identificación Fósil</h4>
+                    </div>
+                </div>
+
+              
+                <!-- Anthropology & Culture Card -->
+                <div class="group relative rounded-2xl overflow-hidden border border-amber-500/20 shadow-lg aspect-square">
+                    <img src="https://i.postimg.cc/13DjKYzK/Antropologia.jpg" alt="Antropología Patrimonio y Cultura" class="w-full h-full object-cover img-zoom-hover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 right-3">
+                        <span class="text-[10px] font-extrabold uppercase bg-amber-500 text-stone-950 px-2 py-0.5 rounded">Antropología</span>
+                        <h4 class="text-sm font-bold text-stone-100 mt-1">Patrimonio & Cultura</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PASO 3: DOLOR O PROBLEMA (Segmentado para los 2 Buyer Personas) -->
+    <section class="py-20 px-4 bg-stone-900 relative">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-amber-500 text-sm font-bold uppercase tracking-widest mb-2">¿En qué etapa de tu camino estás hoy?</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-stone-100">
+                    Sabes que el pasado te fascina... pero te enfrentas a alguna de estas dificultades:
+                </h3>
+            </div>
+
+            <!-- TAB SWITCHER FOR BUYER PERSONA -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex p-1.5 rounded-2xl bg-stone-950 border border-stone-800">
+                    <button id="btn-tab-beginner" onclick="switchPersona('beginner')" class="px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 bg-amber-500 text-stone-950 shadow-md">
+                        <i class="fa-solid fa-compass"></i> Apasionado / Principiante desde cero
+                    </button>
+                    <button id="btn-tab-student" onclick="switchPersona('student')" class="px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 text-stone-400 hover:text-white">
+                        <i class="fa-solid fa-user-graduate"></i> Ya Estudio Carrera / Universitario
+                    </button>
+                </div>
+            </div>
+
+            <!-- PERSONA 1: PRINCIPIANTE / APASIONADO DESDE CERO -->
+            <div id="persona-beginner" class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-red-500 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-100">"Siento que solo es un sueño de películas"</h4>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Ves documentales, expediciones o películas de aventura y sientes el impulso irresistible de viajar y desenterrar fósiles, pero crees que es una meta inalcanzable reservada a unos pocos.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-red-500 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-100">"No sé qué es exactamente ni por dónde comenzar"</h4>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Te atrae la prehistoria, la paleontología y las ruinas antiguas, pero no sabes la diferencia técnica entre cada área ni cómo dar tus primeros pasos sin matricularte 5 años en la facultad.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-red-500 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-user-xmark"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-100">"Tengo miedo de que no funcione o me confunda"</h4>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Temes invertir en algo demasiado abstracto o denso. Quieres una metodología guiada, directa, entendible y práctica que te otorgue validez real desde el primer mes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PERSONA 2: ESTUDIANTE ACTUAL / UNIVERSITARIO -->
+            <div id="persona-student" class="grid md:grid-cols-3 gap-6 hidden">
+                <!-- Card 1 -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-amber-500 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-100">Mucha teoría teórica, muy poca práctica real</h4>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        En la universidad memorizas textos pesados pero te falta el entrenamiento técnico de prospección geofísica, fotografía aérea, fotogrametría y laboratorios de laboratorio.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-amber-500 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-100">Programas universitarios lentos</h4>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Avanzas despacio y ves cómo las facultades tardan semestres enteros en llegar a la parte técnica, la prospección con QGIS y el procesamiento de hallazgos.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-amber-500 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-stone-100">Necesidad de destacar rápido en el mercado</h4>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Quieres integrar proyectos de consultoría patrimonial, expediciones y museos antes de graduarte. Una certificación especializada te dará la ventaja competitiva que buscas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Transition Quote -->
+            <div class="mt-14 p-6 rounded-2xl bg-gradient-to-r from-stone-950 via-amber-950/40 to-stone-950 border border-amber-500/30 text-center max-w-4xl mx-auto">
+                <p class="text-base sm:text-lg text-amber-200 font-medium">
+                    <i class="fa-solid fa-quote-left text-amber-500 mr-2"></i>
+                    No necesitas esperar años para experimentar el trabajo de campo real. La combinación de metodologías de prospección acelerará tu aprendizaje al siguiente nivel.
+                    <i class="fa-solid fa-quote-right text-amber-500 ml-2"></i>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PASO 4: BENEFICIOS (Cómo cambia su vida después) -->
+    <section class="py-20 px-4 bg-stone-950 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Transformación Garantizada</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-100 mt-2">
+                    Lo que lograrás cuando formes parte de esta capacitación técnica
+                </h2>
+                <p class="text-stone-400 mt-3">Tanto si comienzas de cero como si buscas potenciar tu carrera profesional actual.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Benefit 1 -->
+                <div class="glass-panel p-8 rounded-2xl relative group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-100 mb-3">Dominio Práctico de Campo</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Aprenderás la metodología paso a paso de prospección geofísica, fotografía aérea, excavación estratigráfica y georreferenciación con GPS.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="glass-panel p-8 rounded-2xl relative group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-100 mb-3">Prospección & Mapeo Digital</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Maneja herramientas modernas de teledetección, fotografía aérea y análisis espacial para localizar yacimientos y asentamientos antiguos.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="glass-panel p-8 rounded-2xl relative group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-100 mb-3">Identificación de Fósiles y Restos</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Comprende la tafonomía, procesos de fosilización, vertebrados e invertebrados fósiles y la evolución del registro biológico de la Tierra.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="glass-panel p-8 rounded-2xl relative group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-100 mb-3">Visión Antropológica Integral</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Analiza la evolución cultural, lingüística, estructuras de parentesco, desarrollo urbano y diversidad étnica de pueblos antiguos.
+                    </p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="glass-panel p-8 rounded-2xl relative group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-100 mb-3">Diferenciación Currículum</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Acredita tus conocimientos con un diploma de Técnico Auxiliar con código unificado de registro para proyectos patrimoniales y museos.
+                    </p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="glass-panel p-8 rounded-2xl relative group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-100 mb-3">Flexibilidad Total de Estudio</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Estudia a tu propio ritmo desde cualquier dispositivo. Acceso cómodo a la plataforma sin horarios fijos ni entregas estresantes.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PASO 5: AUTORIDAD (Por qué deberías creernos / Certificación) -->
+    <section class="py-20 px-4 bg-expedition-pattern bg-cover bg-center relative">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                        Respaldo Educativo Profesional
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-100 leading-tight">
+                        Formación con sello institucional de <span class="gold-gradient-text">alto valor técnico</span>
+                    </h2>
+                    <p class="text-stone-300 text-base leading-relaxed">
+                        Este programa combina rigor académico con las técnicas más modernas en prospección y análisis de campo, asegurando que adquieras competencias aplicables de inmediato.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-100">Más de 450 cursos dictados</h4>
+                                <p class="text-stone-400 text-sm">Plataforma educativa líder con miles de egresados en América Latina y España.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-100">Acreditación Técnica Oficial</h4>
+                                <p class="text-stone-400 text-sm">Al completar la formación recibes tu certificado institucional con número de registro verificado.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-100">Formación 3 en 1</h4>
+                                <p class="text-stone-400 text-sm">Arqueología, Antropología y Paleontología unificadas en un solo plan de estudios sistemático.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Visual Mockup -->
+                <div class="relative">
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border-2 border-amber-500/30 relative z-10 shadow-2xl">
+                        <div class="border-2 border-amber-500/20 p-6 rounded-2xl bg-stone-900/90 text-center space-y-4">
+                            <div class="flex justify-between items-center text-xs text-stone-400 border-b border-stone-800 pb-3">
+                                <span>CERTIFICACIÓN OFICIAL</span>
+                                <span>CÓDIGO DE REGISTRO UNIFICADO</span>
+                            </div>
+                            <div class="py-4">
+                                <i class="fa-solid fa-award text-5xl text-amber-500 mb-2"></i>
+                                <h3 class="font-serif text-xl sm:text-2xl font-bold text-amber-200">TÉCNICO AUXILIAR EN ARQUEOLOGÍA, ANTROPOLOGÍA Y PALEONTOLOGÍA</h3>
+                                <p class="text-xs text-stone-400 mt-2">Otorgado al estudiante que apruebe satisfactoriamente el plan técnico intensivo.</p>
+                            </div>
+                            <div class="flex justify-around items-center pt-4 border-t border-stone-800 text-xs text-stone-400">
+                                <div>
+                                    <div class="font-bold text-stone-200">9 Módulos</div>
+                                    <div>Plan Completo</div>
+                                </div>
+                                <div class="w-12 h-12 rounded-full border border-amber-500/40 flex items-center justify-center text-amber-400">
+                                    <i class="fa-solid fa-stamp"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-stone-200">Validez Int.</div>
+                                    <div>Acreditable</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Glow decoration behind certificate -->
+                    <div class="absolute -inset-2 bg-gradient-to-r from-amber-600 to-amber-800 rounded-3xl blur-2xl opacity-30 -z-10"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PASO 6: TESTIMONIALES (Prueba Social) -->
+    <section class="py-20 px-4 bg-stone-900">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Historias Reales de Estudiantes</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-100 mt-2">
+                    Lo que opinan quienes ya se están formando con nosotros
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm italic leading-relaxed">
+                            "Siempre quise estudiar paleontología pero no tenía una universidad cerca. Tenía miedo de no entender nada, pero la metodología paso a paso me dio una seguridad enorme."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-800">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Andrea S." class="w-10 h-10 rounded-full object-cover border border-amber-500/50">
+                        <div>
+                            <h4 class="font-bold text-stone-100 text-sm">Andrea S.</h4>
+                            <p class="text-xs text-amber-400">Apasionada por la Paleontología</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm italic leading-relaxed">
+                            "Estudio Antropología en la facultad pero la práctica de prospección era flojísima. El módulo de georreferenciación me ha servido muchísimo para mis trabajos de campo."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-800">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Carlos M." class="w-10 h-10 rounded-full object-cover border border-amber-500/50">
+                        <div>
+                            <h4 class="font-bold text-stone-100 text-sm">Carlos M.</h4>
+                            <p class="text-xs text-amber-400">Estudiante Universitario</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm italic leading-relaxed">
+                            "Las clases son sumamente amenas y los materiales del aula son impecables. Pude elegir la opción en cuotas muy cómodas y empecé inmediatamente."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-800">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Mariana F." class="w-10 h-10 rounded-full object-cover border border-amber-500/50">
+                        <div>
+                            <h4 class="font-bold text-stone-100 text-sm">Mariana F.</h4>
+                            <p class="text-xs text-amber-400">Auxiliar de Museo Patrimonial</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PASO 7: OFERTA (Qué incluye exactamente - Temario Interactivo Detallado) -->
+    <section id="temario" class="py-20 px-4 bg-stone-950">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Plan de Estudio Completo y Detallado</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-100 mt-2">
+                    Programa Académico Dividido en 9 Módulos
+                </h2>
+                <p class="text-stone-400 mt-2">Haz clic en cada módulo para desplegar el temario completo de contenidos oficiales:</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- Module 1 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-1')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M1</span>
+                            Módulo 1: Arqueología
+                        </span>
+                        <i id="icon-mod-1" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-1" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Unidades de estudio de la arqueología: yacimiento y territorio</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La Arqueología Prehistórica como disciplina científica</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La Arqueología Moderna</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Los Métodos de Datación</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Organización Política de Sociedades Prehistóricas</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Patrones de Asentamiento y Uso del Espacio</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Patrones Funerarios</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Estudiando jerarquías sociales</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Tecnología y Técnicas Artesanales Prehistóricas</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-2')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M2</span>
+                            Módulo 2: Reconocimiento Arqueológico y Técnicas de Campo
+                        </span>
+                        <i id="icon-mod-2" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-2" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Reconocimiento arqueológico</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Prospección arqueológica</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Excavación arqueológica</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La cronología</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Estudio del espacio arqueológico</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Fotografía aérea</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Teledetección</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Técnicas de prospección geofísica</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Georreferenciación</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Conservación y restauración de restos arqueológicos</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-3')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M3</span>
+                            Módulo 3: Antropología
+                        </span>
+                        <i id="icon-mod-3" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-3" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Historia y teoría de la antropología</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El origen del individuo y la humanidad</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Evolución humana</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Principales corrientes teóricas en Antropología</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El concepto antropológico de cultura</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Cultura vs. Naturaleza</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Etnocentrismo y relativismo cultural</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El cambio cultural</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Variación biológica humana</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Raza y clasificaciones raciales</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El concepto biológico de raza</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Genética humana</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La evolución de las enfermedades humanas</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-4')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M4</span>
+                            Módulo 4: Lingüística
+                        </span>
+                        <i id="icon-mod-4" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-4" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Lengua y cultura: el lenguaje en la vida humana</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Orígenes del lenguaje</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Lenguaje y pensamiento</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Lenguaje y sociedad</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Lenguaje y saber</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Lenguaje y mercado</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La evolución de la lengua</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La lingüística aplicada</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Comunicación y diversidad cultural y social</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El habla como acción social</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Lenguaje y poder</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-5')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M5</span>
+                            Módulo 5: Antropología Económica
+                        </span>
+                        <i id="icon-mod-5" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-5" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La organización del trabajo</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Los modos de producción</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La distribución de bienes y servicios</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El intercambio de mercado</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El concepto de matrimonio en la sociedad</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El concepto de familia en la sociedad</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Tipos de familia</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El concepto de parentesco</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Estructura del parentesco</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-6')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M6</span>
+                            Módulo 6: Antropología Social
+                        </span>
+                        <i id="icon-mod-6" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-6" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Pueblos originarios</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Antropología urbana</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Construcción/Invención de Estado</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Formaciones estatales y nacionales de América Latina</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Sujeto, Subjetividad y Alteridad</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Modernidad, colonialidad y Alteridad</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Violencia, Racismo y Discriminación</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Diversidad étnica</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Diversidad Sexual y de Género</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-7')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M7</span>
+                            Módulo 7: Antropología Política
+                        </span>
+                        <i id="icon-mod-7" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-7" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Poder y política</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>La representación del poder: símbolos, relaciones, jerarquías y legitimidades</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Antropología comparada de la organización y dinámica del poder</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Las sociedades de cazadores-recolectores</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Las sociedades Tribales</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Las sociedades de Jefaturas</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Las sociedades de Estados</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Del Estado antiguo al Estado moderno</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 8 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-8')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M8</span>
+                            Módulo 8: Paleontología
+                        </span>
+                        <i id="icon-mod-8" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-8" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Definición de fósil</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Generalidades del registro fósil</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Uniformismo y actualismo</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Tafonomía</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Tipos de fósiles</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Procesos de fosilización</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Variación horizontal y vertical del registro fósil</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 9 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('mod-9')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="flex items-center gap-3 text-sm sm:text-base">
+                            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">M9</span>
+                            Módulo 9: Paleobiología
+                        </span>
+                        <i id="icon-mod-9" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-mod-9" class="hidden p-5 pt-0 text-stone-300 text-xs sm:text-sm space-y-2 border-t border-stone-800/50 bg-stone-950/50">
+                        <ul class="grid sm:grid-cols-2 gap-2 pt-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>El individuo</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Vertebrados fósiles</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Crecimiento esquelético</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Ecología de poblaciones y paleobiología</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Ecología: Generalidades de población y especie</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Morfodinámica y evolución morfológica</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Eventos bióticos en la historia de la vida en la tierra</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 text-xs mt-1"></i><span>Paleobiogeografía</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PASO 8: RECURSOS Y VENTAJAS REALES INCLUIDAS EN TU MATRÍCULA -->
+    <section class="py-20 px-4 bg-stone-900 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-amber-500 text-stone-950 px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest">
+                    Todo Incluido en Tu Aula Virtual
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-100 mt-3">
+                    ¿Por qué esta Formación Técnica es <span class="gold-gradient-text">tu Mejor Opción</span>?
+                </h2>
+                <p class="text-stone-400 mt-2">Insumos y beneficios respaldados de forma directa por la plataforma institucional.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Benefit Item 1 -->
+                <div class="glass-panel p-6 rounded-2xl relative border border-amber-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-100 mb-2">Acceso Flexible 24/7 al Campus</h3>
+                        <p class="text-stone-400 text-sm">
+                            Ingresa en cualquier horario desde tu computadora, tablet o teléfono. Estudia a tu propio ritmo sin horarios prefijados.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-stone-800 text-xs text-amber-400 font-bold flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> INCLUIDO EN TU MATRÍCULA
+                    </div>
+                </div>
+
+                <!-- Benefit Item 2 -->
+                <div class="glass-panel p-6 rounded-2xl relative border border-amber-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-100 mb-2">Insumos y Materiales de Lectura</h3>
+                        <p class="text-stone-400 text-sm">
+                            Accede a las guías, textos y recursos didácticos digitales preparados dentro de cada módulo dentro de la plataforma.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-stone-800 text-xs text-amber-400 font-bold flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> INCLUIDO EN TU MATRÍCULA
+                    </div>
+                </div>
+
+                <!-- Benefit Item 3 -->
+                <div class="glass-panel p-6 rounded-2xl relative border border-amber-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-100 mb-2">Certificado Digital Oficial</h3>
+                        <p class="text-stone-400 text-sm">
+                            Al completar los módulos obtienes tu titulación institucional con código unificado de registro para enriquecer tu CV.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-stone-800 text-xs text-amber-400 font-bold flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> INCLUIDO EN TU MATRÍCULA
+                    </div>
+                </div>
+
+                <!-- Benefit Item 4 -->
+                <div class="glass-panel p-6 rounded-2xl relative border border-amber-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-100 mb-2">Formación Teórico-Práctica</h3>
+                        <p class="text-stone-400 text-sm">
+                            Aprende las metodologías reales aplicadas en campo, prospección arqueológica y análisis paleontológico.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-stone-800 text-xs text-amber-400 font-bold flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> INCLUIDO EN TU MATRÍCULA
+                    </div>
+                </div>
+
+                <!-- Benefit Item 5 -->
+                <div class="glass-panel p-6 rounded-2xl relative border border-amber-500/30 flex flex-col justify-between lg:col-span-2">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-100 mb-2">Programa 3 en 1 Integrado</h3>
+                        <p class="text-stone-400 text-sm">
+                            Capacitación completa en las 3 disciplinas esenciales: Arqueología, Antropología y Paleontología en una sola formación técnica, ahorrándote años de estudios dispersos.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-stone-800 text-xs text-amber-400 font-bold flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> INCLUIDO EN TU MATRÍCULA
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PASO 11 & 12: DUAL PRICING OPTIONS (Pago Único & Pago en Cuotas) -->
+    <section id="oferta" class="py-20 px-4 bg-stone-950 relative">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-extrabold uppercase tracking-wider mb-3 border border-amber-500/30">
+                    Matrícula Abierta • Elige Tu Opción de Pago
+                </span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-100">
+                    Comienza Hoy Tu Capacitación Técnica
+                </h2>
+                <p class="text-stone-300 text-sm sm:text-base mt-3">
+                    Acceso inmediato a los 9 Módulos, los insumos descargables del campus y tu Certificación Oficial.
+                </p>
+            </div>
+
+            <!-- DUAL PRICING CARDS -->
+            <div class="grid lg:grid-cols-2 gap-8 items-stretch mb-10">
+                
+                <!-- CARD 1: PAGO EN CUOTAS ($37 USD) -->
+                <div class="glass-panel rounded-3xl p-6 sm:p-8 border-2 border-amber-500/50 flex flex-col justify-between relative shadow-xl hover:border-amber-500 transition-all">
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30 uppercase">
+                                Opción Flexible
+                            </span>
+                            <span class="text-xs text-stone-400 font-semibold">Inscripción por Cuotas</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-stone-100">Pago en Cuotas Accesible</h3>
+                        <p class="text-xs text-stone-400 leading-relaxed">
+                            Ideal para comenzar de inmediato con una inversión inicial muy reducida y avanzar a tu ritmo.
+                        </p>
+
+                        <div class="bg-stone-900/90 rounded-2xl p-5 border border-stone-800 text-center space-y-2">
+                            <div class="text-xs text-stone-400">Antes: <span class="line-through text-red-400">$74 USD</span></div>
+                            <div class="text-4xl font-black text-amber-400 flex items-center justify-center gap-1">
+                                <span>$37 USD</span>
+                                <span class="text-xs font-normal text-stone-300">/ cuota</span>
+                            </div>
+                            <p class="text-[11px] text-amber-300/80">Acceso a lecciones + Insumos de aula + Certificación</p>
+                        </div>
+
+                        <ul class="text-xs text-stone-300 space-y-2.5 pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Acceso inmediato a la plataforma</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Programa completo 9 Módulos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Materiales didácticos del campus</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Certificado al completar</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Garantía de 7 días sin riesgo</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 space-y-3">
+                        <a href="https://go.hotmart.com/D98742312O?ap=d156" class="affiliate-installment-link inline-flex items-center justify-center gap-2 px-6 py-4 bg-amber-500 hover:bg-amber-400 text-stone-950 font-black text-lg rounded-2xl w-full shadow-lg transition-transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>INSCRIBIRME POR $37 USD</span>
+                        </a>
+                        <p class="text-[11px] text-stone-400 text-center">Pago seguro procesado por Hotmart</p>
+                    </div>
+
+                </div>
+
+                <!-- CARD 2: PAGO ÚNICO COMPLETO ($333 USD) -->
+                <div class="glass-panel rounded-3xl p-6 sm:p-8 border-2 border-amber-400 flex flex-col justify-between relative shadow-2xl pulse-glow bg-gradient-to-b from-stone-900/90 via-amber-950/20 to-stone-900/90">
+                    
+                    <div class="absolute -top-3 right-6 bg-gradient-to-r from-amber-500 to-amber-600 text-stone-950 text-[11px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow">
+                        ★ MEJOR VALOR
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-amber-400 text-stone-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase">
+                                Pago Único
+                            </span>
+                            <span class="text-xs text-amber-300 font-semibold">Ahorro Máximo Directo</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-stone-100">Certificación Completa Total</h3>
+                        <p class="text-xs text-stone-300 leading-relaxed">
+                            Abona una sola vez con un descuento masivo sobre el valor regular institucional.
+                        </p>
+
+                        <div class="bg-stone-900/90 rounded-2xl p-5 border border-amber-500/40 text-center space-y-2">
+                            <div class="text-xs text-stone-400">Valor regular: <span class="line-through text-red-400">$1,500 USD</span></div>
+                            <div class="text-4xl font-black text-amber-400 flex items-center justify-center gap-1">
+                                <span>$333 USD</span>
+                                <span class="text-xs font-normal text-stone-300">/ Pago Único</span>
+                            </div>
+                            <p class="text-[11px] text-emerald-400 font-semibold">¡Ahorras más de $1,100 USD en tu matrícula!</p>
+                        </div>
+
+                        <ul class="text-xs text-stone-200 space-y-2.5 pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> Acceso Vitalicio Permanente de por vida</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> Programa completo 9 Módulos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> Insumos y lecturas descargables</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> Prioridad en emisión de certificado</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400"></i> Soporte en campus + Garantía de 7 días</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 space-y-3">
+                        <a href="https://go.hotmart.com/D98742312O?ap=a4cd" class="affiliate-full-link inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-stone-950 font-black text-lg rounded-2xl w-full shadow-xl transition-transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-crown"></i>
+                            <span>INSCRIBIRME PAGO ÚNICO ($333)</span>
+                        </a>
+                        <p class="text-[11px] text-stone-400 text-center">Sin mensualidades • Acceso ilimitado inmediato</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Urgency Counter Box -->
+            <div class="bg-amber-950/30 border border-amber-500/40 rounded-2xl p-4 max-w-xl mx-auto text-center flex items-center justify-around text-amber-200 text-xs sm:text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-fire text-amber-500 text-xl animate-bounce"></i>
+                    <span>Solo <strong class="text-amber-400 font-bold" id="spots-counter">5 cupos</strong> disponibles con descuento</span>
+                </div>
+                <div class="h-4 w-px bg-amber-500/30"></div>
+                <div class="flex items-center gap-1 text-emerald-400 font-semibold">
+                    <i class="fa-solid fa-shield-halved"></i> Garantía 7 Días
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PASO 9: GARANTÍA (Eliminación Total de Riesgo) -->
+    <section class="py-16 px-4 bg-stone-900 border-t border-stone-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-emerald-500/30 flex flex-col md:flex-row items-center gap-8">
+                <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-5xl sm:text-6xl flex-shrink-0 border-2 border-emerald-500/40">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="space-y-3 text-center md:text-left">
+                    <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Cero Riesgo Para Ti</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
+                        7 Días de Garantía Incondicional de Satisfacción
+                    </h3>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        Prueba la formación por 7 días completos. Ingresa a la plataforma, revisa los módulos y los insumos del campus. Si por cualquier motivo sientes que esta capacitación no es para ti, solicitas el reembolso total de tu dinero sin preguntas ni complicaciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASO 10: PREGUNTAS FRECUENTES (Eliminación de Objeciones) -->
+    <section class="py-20 px-4 bg-stone-950">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Resolvemos Tus Dudas</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-100 mt-2">
+                    Preguntas Frecuentes
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('faq-1')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="text-sm sm:text-base">¿Cuál es la diferencia entre el Pago en Cuotas ($37) y el Pago Único ($333)?</span>
+                        <i id="icon-faq-1" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-faq-1" class="hidden p-5 pt-0 text-stone-400 text-sm leading-relaxed border-t border-stone-800 bg-stone-950/50">
+                        El Pago en Cuotas ($37 USD) te permite acceder pagando de forma fraccionada para no desembolsar todo de golpe. El Pago Único ($333 USD) te concede acceso vitalicio permanente con el descuento mayor de $1,500 a $333 USD sin realizar ningún otro pago a futuro.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('faq-2')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="text-sm sm:text-base">¿Necesito experiencia previa o titulación universitaria?</span>
+                        <i id="icon-faq-2" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-faq-2" class="hidden p-5 pt-0 text-stone-400 text-sm leading-relaxed border-t border-stone-800 bg-stone-950/50">
+                        No. El programa inicia desde los fundamentos esenciales hasta técnicas avanzadas de prospección. Es ideal tanto para principiantes desde cero como para universitarios que desean acelerar su conocimiento práctico de campo.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('faq-3')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="text-sm sm:text-base">¿Cómo recibo el acceso a las clases?</span>
+                        <i id="icon-faq-3" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-faq-3" class="hidden p-5 pt-0 text-stone-400 text-sm leading-relaxed border-t border-stone-800 bg-stone-950/50">
+                        El acceso es automático e inmediato. Una vez confirmado tu pago a través de la plataforma segura de Hotmart, recibirás un correo electrónico con tus claves de acceso al aula virtual.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('faq-4')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="text-sm sm:text-base">¿El certificado tiene validez?</span>
+                        <i id="icon-faq-4" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-faq-4" class="hidden p-5 pt-0 text-stone-400 text-sm leading-relaxed border-t border-stone-800 bg-stone-950/50">
+                        Sí. Al finalizar los módulos requeridos se emite tu Certificado Digital con el aval institucional de Técnico Auxiliar, verificable mediante código unificado de registro para tu currículum.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="glass-panel rounded-xl overflow-hidden border border-stone-800">
+                    <button onclick="toggleAccordion('faq-5')" class="w-full p-5 text-left font-bold text-stone-100 flex justify-between items-center hover:bg-stone-900 transition-colors">
+                        <span class="text-sm sm:text-base">¿Qué ocurre si el curso no cumple mis expectativas?</span>
+                        <i id="icon-faq-5" class="fa-solid fa-chevron-down text-amber-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-faq-5" class="hidden p-5 pt-0 text-stone-400 text-sm leading-relaxed border-t border-stone-800 bg-stone-950/50">
+                        Cuentas con 7 días de garantía incondicional. Si durante la primera semana sientes que el curso no es lo que esperabas, solicitas la devolución y se te reintegra el 100% de tu dinero.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MOBILE STICKY FLOATING CTA BAR -->
+    <div class="fixed bottom-0 left-0 right-0 bg-stone-950/95 border-t border-amber-500/30 p-3 z-40 sm:hidden backdrop-blur-md">
+        <div class="flex items-center justify-between gap-2">
+            <div>
+                <div class="text-[10px] text-stone-400">Cuotas desde</div>
+                <div class="text-base font-black text-amber-400">$37 USD</div>
+            </div>
+            <a href="#oferta" class="flex-1 py-2.5 px-3 bg-amber-500 text-stone-950 font-extrabold text-xs rounded-xl text-center shadow-lg">
+                ¡VER OPCIONES DE PAGO!
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-950 py-12 px-4 border-t border-stone-900 text-center text-xs text-stone-400 space-y-4">
+        <div class="max-w-6xl mx-auto space-y-4">
+            <div class="font-serif text-lg text-amber-500 font-bold">
+                Técnico Auxiliar en Arqueología, Antropología y Paleontología
+            </div>
+            <p class="max-w-2xl mx-auto text-stone-400">
+                Página promocional administrada por afiliada independiente. Los derechos de marcas, certificaciones e insumos pertenecen a sus respectivos creadores institucionales.
+            </p>
+            <div class="flex justify-center gap-4 text-stone-400">
+                <a href="#" onclick="openNoticeModal('Términos y Condiciones', 'Este sitio promueve la capacitación técnica online. Los resultados varían según la dedicación del alumno.'); return false;" class="hover:text-amber-400">Términos y Condiciones</a> • 
+                <a href="#" onclick="openNoticeModal('Política de Privacidad', 'Respetamos tu privacidad. No almacenamos datos sensibles en este sitio.'); return false;" class="hover:text-amber-400">Política de Privacidad</a> • 
+                <a href="#" onclick="openNoticeModal('Descargo de Responsabilidad', 'Los testimonios corresponden a experiencias reales de alumnos.'); return false;" class="hover:text-amber-400">Descargo de Responsabilidad</a>
+            </div>
+            <p class="text-stone-400 cursor-pointer select-none" id="secret-admin-trigger">© 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- LINK CONFIGURATION MODAL (Protegido y oculto para administrar URLs de Afiliada) -->
+    <div id="modal-config" class="fixed inset-0 bg-stone-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel p-6 sm:p-8 rounded-2xl max-w-md w-full border border-amber-500/40 space-y-5 shadow-2xl">
+            <div class="flex justify-between items-center border-b border-stone-800 pb-3">
+                <h3 class="font-bold text-amber-400 text-base flex items-center gap-2">
+                    <i class="fa-solid fa-link"></i> Configurar Enlaces de Afiliada
+                </h3>
+                <button onclick="closeLinkConfigModal()" class="text-stone-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            
+            <p class="text-xs text-stone-300 leading-relaxed">
+                Puedes personalizar las URLs directas de tus botones de Hotmart si lo requieres:
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-xs font-bold text-stone-300">URL Pago en Cuotas ($37 USD):</label>
+                    <input type="url" id="link-installment-input" value="https://go.hotmart.com/D98742312O?ap=d156" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3 py-2 text-xs text-amber-200 focus:outline-none focus:border-amber-500 mt-1">
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-stone-300">URL Pago Único Completo ($333 USD):</label>
+                    <input type="url" id="link-full-input" value="https://go.hotmart.com/D98742312O?ap=a4cd" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-3 py-2 text-xs text-amber-200 focus:outline-none focus:border-amber-500 mt-1">
+                </div>
+            </div>
+
+            <div class="flex gap-2 pt-2">
+                <button onclick="saveCustomLinks()" class="flex-1 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-xl text-xs transition-colors">
+                    Guardar Enlaces
+                </button>
+                <button onclick="closeLinkConfigModal()" class="px-4 py-2.5 bg-stone-800 hover:bg-stone-700 text-stone-300 font-bold rounded-xl text-xs">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENERIC NOTICE MODAL -->
+    <div id="modal-notice" class="fixed inset-0 bg-stone-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel p-6 rounded-2xl max-w-md w-full border border-amber-500/40 space-y-4 text-center">
+            <h3 id="notice-title" class="font-bold text-amber-400 text-lg"></h3>
+            <p id="notice-body" class="text-xs text-stone-300 leading-relaxed"></p>
+            <button onclick="closeNoticeModal()" class="px-6 py-2 bg-amber-500 text-stone-950 font-bold rounded-xl text-xs">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Hotmart affiliate checkout links provided
+        let installmentLink = "https://go.hotmart.com/D98742312O?ap=d156";
+        let fullLink = "https://go.hotmart.com/D98742312O?ap=a4cd";
+
+        window.onload = function() {
+            // Load custom stored links if available
+            const savedInstallment = localStorage.getItem('affiliate_installment_link');
+            const savedFull = localStorage.getItem('affiliate_full_link');
+            if (savedInstallment) installmentLink = savedInstallment;
+            if (savedFull) fullLink = savedFull;
+
+            updateAllAffiliateButtons();
+            startCountdown();
+            startSpotsDecrement();
+            initSecretAdminAccess();
+        };
+
+        // Secret Admin Access (Oculto para usuarios comunes)
+        function initSecretAdminAccess() {
+            // Opción 1: Parámetro URL ?admin=1
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('admin') === '1') {
+                openLinkConfigModal();
+            }
+
+            // Opción 2: Atajo Ctrl + Shift + L
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
+                    e.preventDefault();
+                    openLinkConfigModal();
+                }
+            });
+
+            // Opción 3: 5 clics en el copyright del footer
+            let clicks = 0;
+            const trigger = document.getElementById('secret-admin-trigger');
+            if (trigger) {
+                trigger.addEventListener('click', function() {
+                    clicks++;
+                    if (clicks >= 5) {
+                        clicks = 0;
+                        openLinkConfigModal();
+                    }
+                });
+            }
+        }
+
+        function updateAllAffiliateButtons() {
+            document.querySelectorAll('.affiliate-installment-link').forEach(btn => {
+                btn.href = installmentLink;
+            });
+            document.querySelectorAll('.affiliate-full-link').forEach(btn => {
+                btn.href = fullLink;
+            });
+
+            document.getElementById('link-installment-input').value = installmentLink;
+            document.getElementById('link-full-input').value = fullLink;
+        }
+
+        // Persona Tab Switcher Logic
+        function switchPersona(type) {
+            const beginnerTab = document.getElementById('persona-beginner');
+            const studentTab = document.getElementById('persona-student');
+            const btnBeginner = document.getElementById('btn-tab-beginner');
+            const btnStudent = document.getElementById('btn-tab-student');
+
+            if (type === 'beginner') {
+                beginnerTab.classList.remove('hidden');
+                studentTab.classList.add('hidden');
+                btnBeginner.className = "px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 bg-amber-500 text-stone-950 shadow-md";
+                btnStudent.className = "px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 text-stone-400 hover:text-white";
+            } else {
+                studentTab.classList.remove('hidden');
+                beginnerTab.classList.add('hidden');
+                btnStudent.className = "px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 bg-amber-500 text-stone-950 shadow-md";
+                btnBeginner.className = "px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 text-stone-400 hover:text-white";
+            }
+        }
+
+        // Accordion Toggle
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Timer Logic
+        function startCountdown() {
+            let totalSeconds = (2 * 3600) + (14 * 60) + 35;
+            setInterval(() => {
+                if (totalSeconds <= 0) {
+                    totalSeconds = (2 * 3600) + (14 * 60) + 35;
+                } else {
+                    totalSeconds--;
+                }
+
+                const hrs = Math.floor(totalSeconds / 3600);
+                const mins = Math.floor((totalSeconds % 3600) / 60);
+                const secs = totalSeconds % 60;
+
+                document.getElementById('timer-hours').innerText = String(hrs).padStart(2, '0');
+                document.getElementById('timer-minutes').innerText = String(mins).padStart(2, '0');
+                document.getElementById('timer-seconds').innerText = String(secs).padStart(2, '0');
+            }, 1000);
+        }
+
+        // Spots Decrement
+        function startSpotsDecrement() {
+            let spots = 5;
+            setInterval(() => {
+                if (spots > 2 && Math.random() > 0.6) {
+                    spots--;
+                    const counter = document.getElementById('spots-counter');
+                    if (counter) counter.innerText = spots + " cupos";
+                }
+            }, 20000);
+        }
+
+        // Modal Link Configuration
+        function openLinkConfigModal() {
+            document.getElementById('modal-config').classList.remove('hidden');
+        }
+
+        function closeLinkConfigModal() {
+            document.getElementById('modal-config').classList.add('hidden');
+        }
+
+        function saveCustomLinks() {
+            const instVal = document.getElementById('link-installment-input').value.trim();
+            const fullVal = document.getElementById('link-full-input').value.trim();
+
+            if (instVal && fullVal) {
+                installmentLink = instVal;
+                fullLink = fullVal;
+                localStorage.setItem('affiliate_installment_link', instVal);
+                localStorage.setItem('affiliate_full_link', fullVal);
+                updateAllAffiliateButtons();
+                closeLinkConfigModal();
+                openNoticeModal("¡Enlaces Actualizados!", "Tus enlaces de afiliada se han guardado y aplicado a los botones correspondientes.");
+            }
+        }
+
+        // Generic Notice Modal
+        function openNoticeModal(title, text) {
+            document.getElementById('notice-title').innerText = title;
+            document.getElementById('notice-body').innerText = text;
+            document.getElementById('modal-notice').classList.remove('hidden');
+        }
+
+        function closeNoticeModal() {
+            document.getElementById('modal-notice').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
