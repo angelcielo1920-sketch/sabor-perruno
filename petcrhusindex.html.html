@@ -1,0 +1,921 @@
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    #gameContainer {
+        width: 100%;
+        max-width: 500px;
+        height: 100vh;
+        max-height: 900px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-label {
+        font-size: 10px;
+        color: #666;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .stat-value {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    #levelInfo {
+        text-align: center;
+        padding: 8px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    #levelInfo h2 {
+        font-size: 16px;
+        color: #764ba2;
+    }
+
+    #objective {
+        font-size: 12px;
+        color: #666;
+    }
+
+    #board {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 3px;
+        padding: 10px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+        position: relative;
+    }
+
+    .cell {
+        background: rgba(255,255,255,0.3);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+        user-select: none;
+    }
+
+    .cell:hover {
+        transform: scale(1.05);
+        background: rgba(255,255,255,0.5);
+    }
+
+    .cell.selected {
+        animation: pulse 0.5s infinite;
+        background: rgba(255,255,0,0.5);
+        box-shadow: 0 0 15px rgba(255,255,0,0.8);
+    }
+
+    .cell.matched {
+        animation: matchAnim 0.4s ease-out;
+    }
+
+    .cell.falling {
+        animation: fallAnim 0.3s ease-in;
+    }
+
+    .cell.power-bomb {
+        box-shadow: 0 0 10px #ff4444;
+        border: 2px solid #ff4444;
+    }
+
+    .cell.power-ray {
+        box-shadow: 0 0 10px #4444ff;
+        border: 2px solid #4444ff;
+    }
+
+    .cell.power-color {
+        box-shadow: 0 0 10px #ff44ff;
+        border: 2px solid #ff44ff;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+
+    @keyframes matchAnim {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.3); opacity: 0.5; }
+        100% { transform: scale(0); opacity: 0; }
+    }
+
+    @keyframes fallAnim {
+        0% { transform: translateY(-50px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+
+    #powers {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+
+    .power-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid #764ba2;
+        background: white;
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: all 0.2s;
+    }
+
+    .power-btn:hover {
+        transform: scale(1.1);
+        background: #f0f0f0;
+    }
+
+    .power-btn.active {
+        background: #764ba2;
+        color: white;
+        box-shadow: 0 0 15px #764ba2;
+    }
+
+    .power-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #ff4444;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    #modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    #modal.show {
+        display: flex;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 350px;
+        width: 90%;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-content h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #764ba2;
+    }
+
+    .modal-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #666;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 5px;
+        transition: all 0.2s;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(118,75,162,0.4);
+    }
+
+    .btn-secondary {
+        background: #f0f0f0;
+        color: #333;
+    }
+
+    #startScreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .start-content {
+        text-align: center;
+        color: white;
+    }
+
+    .start-content h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .start-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    .pet-display {
+        font-size: 60px;
+        margin: 20px 0;
+        animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+
+    #progressBar {
+        width: 100%;
+        height: 8px;
+        background: rgba(255,255,255,0.3);
+        border-radius: 4px;
+        margin-top: 5px;
+        overflow: hidden;
+    }
+
+    #progressFill {
+        height: 100%;
+        background: linear-gradient(90deg, #ffd700, #ffaa00);
+        border-radius: 4px;
+        transition: width 0.3s;
+    }
+
+    .combo-text {
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffd700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        pointer-events: none;
+        animation: comboAnim 1s ease-out forwards;
+        z-index: 100;
+    }
+
+    @keyframes comboAnim {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+    }
+</style>
+<div id="gameContainer">
+    <div id="header">
+        <div class="stat">
+            <div class="stat-label">Nivel</div>
+            <div class="stat-value" id="levelNum">1</div>
+        </div>
+        <div class="stat">
+            <div class="stat-label">Puntos</div>
+            <div class="stat-value" id="score">0</div>
+        </div>
+        <div class="stat">
+            <div class="stat-label">Movimientos</div>
+            <div class="stat-value" id="moves">30</div>
+        </div>
+        <div class="stat">
+            <div class="stat-label">Estrellas</div>
+            <div class="stat-value" id="stars">⭐</div>
+        </div>
+    </div>
+
+    <div id="levelInfo">
+        <h2 id="levelTitle">Nivel 1 - Primeros Pasos</h2>
+        <div id="objective">Objetivo: Consigue 500 puntos</div>
+        <div id="progressBar">
+            <div id="progressFill" style="width: 0%"></div>
+        </div>
+    </div>
+
+    <div id="board"></div>
+
+    <div id="powers">
+        <button class="power-btn" onclick="activatePower('bomb')" title="Bomba">
+            💣
+            <span class="power-count" id="bombCount">3</span>
+        </button>
+        <button class="power-btn" onclick="activatePower('ray')" title="Rayo">
+            ⚡
+            <span class="power-count" id="rayCount">2</span>
+        </button>
+        <button class="power-btn" onclick="activatePower('color')" title="Bomba de Color">
+            🌈
+            <span class="power-count" id="colorCount">1</span>
+        </button>
+        <button class="power-btn" onclick="activatePower('shuffle')" title="Mezclar">
+            🔀
+            <span class="power-count" id="shuffleCount">2</span>
+        </button>
+    </div>
+</div>
+
+<div id="modal">
+    <div class="modal-content">
+        <h2 id="modalTitle">¡Nivel Completado!</h2>
+        <p id="modalText">¡Excelente trabajo!</p>
+        <div id="modalStars" style="font-size: 40px; margin: 15px 0;">⭐⭐⭐</div>
+        <button class="btn btn-primary" id="modalBtn" onclick="nextLevel()">Siguiente Nivel</button>
+    </div>
+</div>
+
+<script>
+    // Configuración del juego
+    const BOARD_SIZE = 8;
+    const PET_TYPES = ['🐱', '🐶', '🐈', '', '🦮', ''];
+    
+    const levels = generateLevels();
+    
+    let currentLevel = 0;
+    let board = [];
+    let selectedCell = null;
+    let score = 0;
+    let moves = 0;
+    let isProcessing = false;
+    let combo = 0;
+    let powers = { bomb: 3, ray: 2, color: 1, shuffle: 2 };
+    let activePower = null;
+
+    function generateLevels() {
+        const levelData = [];
+        const objectives = [
+            { type: 'score', target: 500, desc: 'Consigue {target} puntos' },
+            { type: 'score', target: 1000, desc: 'Consigue {target} puntos' },
+            { type: 'score', target: 1500, desc: 'Consigue {target} puntos' },
+            { type: 'collect', pet: '🐱', count: 10, desc: 'Recoge {count} gatitos 🐱' },
+            { type: 'collect', pet: '🐶', count: 10, desc: 'Recoge {count} perritos 🐶' },
+            { type: 'collect', pet: '', count: 20, desc: 'Recoge {count} gatitos 🐱' },
+            { type: 'collect', pet: '🐶', count: 20, desc: 'Recoge {count} perritos 🐶' },
+            { type: 'score', target: 2000, desc: 'Consigue {target} puntos' },
+            { type: 'collect', pet: '🐈', count: 15, desc: 'Recoge {count} gatos 🐈' },
+            { type: 'collect', pet: '🐕', count: 15, desc: 'Recoge {count} perros 🐕' },
+        ];
+
+        for (let i = 0; i < 50; i++) {
+            const objIndex = i % objectives.length;
+            const objective = objectives[objIndex];
+            const target = objective.target || objective.count;
+            const moves = Math.max(20, 40 - Math.floor(i / 5));
+            const petTypes = PET_TYPES.slice(0, Math.min(6, 3 + Math.floor(i / 10)));
+
+            levelData.push({
+                level: i + 1,
+                title: `Nivel ${i + 1} - ${getLevelName(i)}`,
+                objective: {
+                    ...objective,
+                    desc: objective.desc.replace('{target}', target).replace('{count}', target)
+                },
+                moves: moves,
+                petTypes: petTypes,
+                targetScore: objective.type === 'score' ? target : target * 50
+            });
+        }
+        return levelData;
+    }
+
+    function getLevelName(index) {
+        const names = [
+            'Primeros Pasos', 'Aprendiz', 'Explorador', 'Cazador', 'Maestro',
+            'Experto', 'Veterano', 'Campeón', 'Leyenda', 'Mítico',
+            'Divino', 'Supremo', 'Épico', 'Legendario', 'Inmortal',
+            'Transcendental', 'Omnipotente', 'Infinito', 'Eterno', 'Absoluto'
+        ];
+        return names[index % names.length];
+    }
+
+    function startGame() {
+        document.getElementById('startScreen').style.display = 'none';
+        loadLevel(0);
+    }
+
+    function loadLevel(levelIndex) {
+        currentLevel = levelIndex;
+        const level = levels[levelIndex];
+        score = 0;
+        moves = level.moves;
+        combo = 0;
+        selectedCell = null;
+        activePower = null;
+
+        document.getElementById('levelNum').textContent = level.level;
+        document.getElementById('score').textContent = score;
+        document.getElementById('moves').textContent = moves;
+        document.getElementById('levelTitle').textContent = level.title;
+        document.getElementById('objective').textContent = level.objective.desc;
+        document.getElementById('progressFill').style.width = '0%';
+
+        initBoard(level.petTypes);
+        updateStars();
+    }
+
+    function initBoard(petTypes) {
+        board = [];
+        const boardEl = document.getElementById('board');
+        boardEl.innerHTML = '';
+
+        for (let row = 0; row < BOARD_SIZE; row++) {
+            board[row] = [];
+            for (let col = 0; col < BOARD_SIZE; col++) {
+                let pet;
+                do {
+                    pet = petTypes[Math.floor(Math.random() * petTypes.length)];
+                } while (wouldCreateMatch(row, col, pet));
+
+                board[row][col] = pet;
+                const cell = createCell(row, col, pet);
+                boardEl.appendChild(cell);
+            }
+        }
+    }
+
+    function wouldCreateMatch(row, col, pet) {
+        if (col >= 2 && board[row][col-1] === pet && board[row][col-2] === pet) return true;
+        if (row >= 2 && board[row-1][col] === pet && board[row-2][col] === pet) return true;
+        return false;
+    }
+
+    function createCell(row, col, pet) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        cell.textContent = pet;
+        cell.dataset.row = row;
+        cell.dataset.col = col;
+        cell.addEventListener('click', () => handleCellClick(row, col));
+        cell.addEventListener('touchstart', (e) => handleTouchStart(e, row, col));
+        cell.addEventListener('touchend', (e) => handleTouchEnd(e, row, col));
+        return cell;
+    }
+
+    let touchStartPos = null;
+
+    function handleTouchStart(e, row, col) {
+        touchStartPos = { x: e.touches[0].clientX, y: e.touches[0].clientY, row, col };
+    }
+
+    function handleTouchEnd(e, row, col) {
+        if (!touchStartPos) return;
+        const touch = e.changedTouches[0];
+        const dx = touch.clientX - touchStartPos.x;
+        const dy = touch.clientY - touchStartPos.y;
+
+        if (Math.abs(dx) > 30 || Math.abs(dy) > 30) {
+            let targetRow = row, targetCol = col;
+            if (Math.abs(dx) > Math.abs(dy)) {
+                targetCol += dx > 0 ? 1 : -1;
+            } else {
+                targetRow += dy > 0 ? 1 : -1;
+            }
+
+            if (targetRow >= 0 && targetRow < BOARD_SIZE && targetCol >= 0 && targetCol < BOARD_SIZE) {
+                selectedCell = { row: touchStartPos.row, col: touchStartPos.col };
+                handleCellClick(targetRow, targetCol);
+            }
+        }
+        touchStartPos = null;
+    }
+
+    function handleCellClick(row, col) {
+        if (isProcessing) return;
+
+        if (activePower) {
+            usePower(row, col);
+            return;
+        }
+
+        if (!selectedCell) {
+            selectedCell = { row, col };
+            highlightCell(row, col, true);
+        } else {
+            const rowDiff = Math.abs(selectedCell.row - row);
+            const colDiff = Math.abs(selectedCell.col - col);
+
+            if ((rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1)) {
+                swapPets(selectedCell.row, selectedCell.col, row, col);
+            }
+
+            highlightCell(selectedCell.row, selectedCell.col, false);
+            selectedCell = null;
+        }
+    }
+
+    function highlightCell(row, col, highlight) {
+        const cell = getCellElement(row, col);
+        if (cell) {
+            cell.classList.toggle('selected', highlight);
+        }
+    }
+
+    function getCellElement(row, col) {
+        return document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
+    }
+
+    async function swapPets(row1, col1, row2, col2) {
+        isProcessing = true;
+
+        // Intercambiar en el array
+        const temp = board[row1][col1];
+        board[row1][col1] = board[row2][col2];
+        board[row2][col2] = temp;
+
+        updateBoard();
+
+        const matches = findMatches();
+        if (matches.length === 0) {
+            // Revertir si no hay matches
+            await sleep(200);
+            const temp = board[row1][col1];
+            board[row1][col1] = board[row2][col2];
+            board[row2][col2] = temp;
+            updateBoard();
+            isProcessing = false;
+            return;
+        }
+
+        moves--;
+        document.getElementById('moves').textContent = moves;
+
+        await processMatches();
+        isProcessing = false;
+
+        checkGameEnd();
+    }
+
+    function findMatches() {
+        const matches = [];
+
+        // Horizontal
+        for (let row = 0; row < BOARD_SIZE; row++) {
+            for (let col = 0; col < BOARD_SIZE - 2; col++) {
+                const pet = board[row][col];
+                if (pet && board[row][col+1] === pet && board[row][col+2] === pet) {
+                    let match = [{row, col}, {row, col: col+1}, {row, col: col+2}];
+                    let end = col + 3;
+                    while (end < BOARD_SIZE && board[row][end] === pet) {
+                        match.push({row, col: end});
+                        end++;
+                    }
+                    matches.push(match);
+                    col = end - 1;
+                }
+            }
+        }
+
+        // Vertical
+        for (let col = 0; col < BOARD_SIZE; col++) {
+            for (let row = 0; row < BOARD_SIZE - 2; row++) {
+                const pet = board[row][col];
+                if (pet && board[row+1][col] === pet && board[row+2][col] === pet) {
+                    let match = [{row, col}, {row: row+1, col}, {row: row+2, col}];
+                    let end = row + 3;
+                    while (end < BOARD_SIZE && board[end][col] === pet) {
+                        match.push({row: end, col});
+                        end++;
+                    }
+                    matches.push(match);
+                    row = end - 1;
+                }
+            }
+        }
+
+        return matches;
+    }
+
+    async function processMatches() {
+        combo = 0;
+        let matches = findMatches();
+
+        while (matches.length > 0) {
+            combo++;
+            const points = matches.length * 10 * combo;
+            score += points;
+            document.getElementById('score').textContent = score;
+
+            if (combo > 1) {
+                showCombo(combo);
+            }
+
+            // Animar matches
+            for (const match of matches) {
+                for (const cell of match) {
+                    const el = getCellElement(cell.row, cell.col);
+                    if (el) el.classList.add('matched');
+                }
+            }
+
+            await sleep(400);
+
+            // Eliminar matches
+            for (const match of matches) {
+                for (const cell of match) {
+                    board[cell.row][cell.col] = null;
+                }
+            }
+
+            updateBoard();
+            await sleep(200);
+
+            // Gravedad
+            applyGravity();
+            updateBoard();
+            await sleep(300);
+
+            // Rellenar
+            fillEmpty();
+            updateBoard();
+            await sleep(300);
+
+            matches = findMatches();
+        }
+
+        updateProgress();
+    }
+
+    function applyGravity() {
+        for (let col = 0; col < BOARD_SIZE; col++) {
+            let emptyRow = BOARD_SIZE - 1;
+            for (let row = BOARD_SIZE - 1; row >= 0; row--) {
+                if (board[row][col] !== null) {
+                    board[emptyRow][col] = board[row][col];
+                    if (emptyRow !== row) {
+                        board[row][col] = null;
+                    }
+                    emptyRow--;
+                }
+            }
+        }
+    }
+
+    function fillEmpty() {
+        const level = levels[currentLevel];
+        for (let row = 0; row < BOARD_SIZE; row++) {
+            for (let col = 0; col < BOARD_SIZE; col++) {
+                if (board[row][col] === null) {
+                    board[row][col] = level.petTypes[Math.floor(Math.random() * level.petTypes.length)];
+                }
+            }
+        }
+    }
+
+    function updateBoard() {
+        for (let row = 0; row < BOARD_SIZE; row++) {
+            for (let col = 0; col < BOARD_SIZE; col++) {
+                const cell = getCellElement(row, col);
+                if (cell) {
+                    cell.textContent = board[row][col] || '';
+                    cell.className = 'cell';
+                }
+            }
+        }
+    }
+
+    function showCombo(combo) {
+        const board = document.getElementById('board');
+        const comboText = document.createElement('div');
+        comboText.className = 'combo-text';
+        comboText.textContent = `¡COMBO x${combo}!`;
+        comboText.style.left = '50%';
+        comboText.style.top = '50%';
+        comboText.style.transform = 'translate(-50%, -50%)';
+        board.appendChild(comboText);
+        setTimeout(() => comboText.remove(), 1000);
+    }
+
+    function updateProgress() {
+        const level = levels[currentLevel];
+        const progress = Math.min(100, (score / level.targetScore) * 100);
+        document.getElementById('progressFill').style.width = progress + '%';
+        updateStars();
+    }
+
+    function updateStars() {
+        const level = levels[currentLevel];
+        const progress = score / level.targetScore;
+        let stars = '';
+        if (progress >= 1) stars = '⭐⭐⭐';
+        else if (progress >= 0.7) stars = '⭐⭐';
+        else if (progress >= 0.4) stars = '⭐';
+        else stars = '💫';
+        document.getElementById('stars').textContent = stars;
+    }
+
+    function checkGameEnd() {
+        const level = levels[currentLevel];
+        if (score >= level.targetScore) {
+            setTimeout(() => showLevelComplete(), 500);
+        } else if (moves <= 0) {
+            setTimeout(() => showGameOver(), 500);
+        }
+    }
+
+    function showLevelComplete() {
+        const modal = document.getElementById('modal');
+        document.getElementById('modalTitle').textContent = '¡Nivel Completado! 🎉';
+        document.getElementById('modalText').textContent = `Puntuación: ${score}`;
+        
+        const level = levels[currentLevel];
+        const progress = score / level.targetScore;
+        let stars = '⭐';
+        if (progress >= 1) stars = '⭐⭐⭐';
+        else if (progress >= 0.7) stars = '⭐⭐';
+        document.getElementById('modalStars').textContent = stars;
+        
+        document.getElementById('modalBtn').textContent = 'Siguiente Nivel';
+        document.getElementById('modalBtn').onclick = nextLevel;
+        modal.classList.add('show');
+    }
+
+    function showGameOver() {
+        const modal = document.getElementById('modal');
+        document.getElementById('modalTitle').textContent = '¡Game Over! 😢';
+        document.getElementById('modalText').textContent = `Te faltaron ${levels[currentLevel].targetScore - score} puntos`;
+        document.getElementById('modalStars').textContent = '💔';
+        document.getElementById('modalBtn').textContent = 'Reintentar';
+        document.getElementById('modalBtn').onclick = retryLevel;
+        modal.classList.add('show');
+    }
+
+    function nextLevel() {
+        document.getElementById('modal').classList.remove('show');
+        if (currentLevel < levels.length - 1) {
+            loadLevel(currentLevel + 1);
+        } else {
+            alert('¡Felicidades! ¡Has completado todos los niveles! 🏆');
+            loadLevel(0);
+        }
+    }
+
+    function retryLevel() {
+        document.getElementById('modal').classList.remove('show');
+        loadLevel(currentLevel);
+    }
+
+    function activatePower(power) {
+        if (powers[power] <= 0) return;
+        
+        if (activePower === power) {
+            activePower = null;
+            document.querySelectorAll('.power-btn').forEach(btn => btn.classList.remove('active'));
+        } else {
+            activePower = power;
+            document.querySelectorAll('.power-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.closest('.power-btn').classList.add('active');
+        }
+    }
+
+    async function usePower(row, col) {
+        if (!activePower || powers[activePower] <= 0) return;
+
+        isProcessing = true;
+        powers[activePower]--;
+        document.getElementById(activePower + 'Count').textContent = powers[activePower];
+
+        switch(activePower) {
+            case 'bomb':
+                // Elimina 3x3 alrededor
+                for (let r = Math.max(0, row-1); r <= Math.min(BOARD_SIZE-1, row+1); r++) {
+                    for (let c = Math.max(0, col-1); c <= Math.min(BOARD_SIZE-1, col+1); c++) {
+                        board[r][c] = null;
+                    }
+                }
+                score += 100;
+                break;
+            case 'ray':
+                // Elimina fila y columna
+                for (let i = 0; i < BOARD_SIZE; i++) {
+                    board[row][i] = null;
+                    board[i][col] = null;
+                }
+                score += 150;
+                break;
+            case 'color':
+                // Elimina todas las mascotas del mismo tipo
+                const pet = board[row][col];
+                for (let r = 0; r < BOARD_SIZE; r++) {
+                    for (let c = 0; c < BOARD_SIZE; c++) {
+                        if (board[r][c] === pet) {
+                            board[r][c] = null;
+                        }
+                    }
+                }
+                score += 200;
+                break;
+            case 'shuffle':
+                // Mezcla el tablero
+                const allPets = [];
+                for (let r = 0; r < BOARD_SIZE; r++) {
+                    for (let c = 0; c < BOARD_SIZE; c++) {
+                        allPets.push(board[r][c]);
+                    }
+                }
+                allPets.sort(() => Math.random() - 0.5);
+                let idx = 0;
+                for (let r = 0; r < BOARD_SIZE; r++) {
+                    for (let c = 0; c < BOARD_SIZE; c++) {
+                        board[r][c] = allPets[idx++];
+                    }
+                }
+                score += 50;
+                break;
+        }
+
+        activePower = null;
+        document.querySelectorAll('.power-btn').forEach(btn => btn.classList.remove('active'));
+
+        updateBoard();
+        await sleep(300);
+        applyGravity();
+        fillEmpty();
+        updateBoard();
+        await sleep(300);
+
+        document.getElementById('score').textContent = score;
+        updateProgress();
+        await processMatches();
+        isProcessing = false;
+        checkGameEnd();
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    // Prevenir scroll en móvil
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+</script>
