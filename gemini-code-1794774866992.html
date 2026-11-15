@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Código Barista | Recetario de Cafetería de Especialidad en Casa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-white: #FFFFFF;
+      --espresso: #1E1611;
+      --espresso-soft: #2E221B;
+      --caramel: #C27D38;
+      --caramel-hover: #A86829;
+      --text-main: #2B211B;
+      --text-muted: #66584F;
+      --border-soft: #E8DFD3;
+      --radius: 14px;
+      --shadow-sm: 0 6px 20px rgba(30, 22, 17, 0.05);
+      --shadow-lg: 0 18px 40px rgba(30, 22, 17, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.2;
+      color: var(--espresso);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Botón Principal */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--caramel);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      padding: 18px 34px;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(194, 125, 56, 0.35);
+      transition: all 0.25s ease;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--caramel-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(194, 125, 56, 0.45);
+    }
+
+    .btn-full {
+      width: 100%;
+      max-width: 460px;
+    }
+
+    .micro-note {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Barra superior sutil */
+    .top-bar {
+      background-color: var(--espresso);
+      color: #EFE6DA;
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      letter-spacing: 0.3px;
+    }
+
+    .top-bar span {
+      color: #E5A967;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 72px 0 84px;
+      background: linear-gradient(180deg, #F4EDE3 0%, var(--bg-cream) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--caramel);
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4vw, 3.1rem);
+      margin-bottom: 20px;
+    }
+
+    .hero p.lead {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 26px;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .hero-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .hero-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--caramel);
+      font-weight: 700;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: var(--shadow-lg);
+      display: block;
+    }
+
+    .floating-badge {
+      position: absolute;
+      bottom: -18px;
+      left: 24px;
+      background: var(--bg-white);
+      padding: 14px 20px;
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-soft);
+      font-size: 0.9rem;
+    }
+
+    .floating-badge strong {
+      display: block;
+      color: var(--espresso);
+    }
+
+    /* Secciones generales */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 52px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Problema / Solución */
+    .story-section {
+      background-color: var(--bg-white);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .story-grid img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pain-list {
+      list-style: none;
+      margin: 22px 0;
+    }
+
+    .pain-list li {
+      padding: 10px 0 10px 28px;
+      position: relative;
+      color: var(--text-muted);
+      border-bottom: 1px solid #F3ECE2;
+    }
+
+    .pain-list li::before {
+      content: "✕";
+      position: absolute;
+      left: 0;
+      color: #B8523B;
+      font-weight: 700;
+    }
+
+    .secret-box {
+      background-color: var(--bg-cream);
+      border-left: 4px solid var(--caramel);
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 22px;
+      font-size: 0.98rem;
+    }
+
+    /* Contenido del Recetario */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .module-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .module-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--caramel);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .module-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+    }
+
+    .module-card ul {
+      list-style: none;
+    }
+
+    .module-card ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 0.96rem;
+      color: var(--text-muted);
+    }
+
+    .module-card ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--caramel);
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+
+    /* Destacado visual de bebidas frías */
+    .showcase-banner {
+      margin-top: 40px;
+      background-color: var(--espresso);
+      color: #FAF7F2;
+      border-radius: 18px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+    }
+
+    .showcase-text {
+      padding: 40px;
+    }
+
+    .showcase-text h3 {
+      color: #FFFFFF;
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+
+    .showcase-text p {
+      color: #D8CEC2;
+      font-size: 0.98rem;
+    }
+
+    .showcase-banner img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Bonos */
+    .bonuses-section {
+      background-color: var(--bg-white);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .bonus-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bonus-badge {
+      display: inline-block;
+      background: rgba(194, 125, 56, 0.14);
+      color: var(--caramel-hover);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .bonus-card h3 {
+      font-size: 1.22rem;
+      margin-bottom: 10px;
+    }
+
+    .bonus-card p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .bonus-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--espresso);
+    }
+
+    .bonus-value span {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      margin-right: 6px;
+    }
+
+    /* Testimonios */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stars {
+      color: #D99B26;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .review-card p {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .reviewer {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--espresso);
+    }
+
+    /* Caja de Oferta */
+    .offer-section {
+      background: linear-gradient(180deg, var(--bg-cream) 0%, #EFE6D8 100%);
+    }
+
+    .offer-box {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-white);
+      border: 2px solid var(--caramel);
+      border-radius: 22px;
+      padding: 48px 40px;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .stack-list {
+      list-style: none;
+      text-align: left;
+      max-width: 540px;
+      margin: 28px auto;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .stack-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border-soft);
+      font-size: 0.96rem;
+      gap: 12px;
+    }
+
+    .stack-list li span.price-tag {
+      color: var(--text-muted);
+      text-decoration: line-through;
+      white-space: nowrap;
+    }
+
+    .price-block {
+      margin: 28px 0;
+    }
+
+    .old-price {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .old-price span {
+      text-decoration: line-through;
+    }
+
+    .current-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--espresso);
+      line-height: 1.1;
+      margin: 6px 0;
+    }
+
+    .guarantee-box {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px dashed var(--border-soft);
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guarantee-box strong {
+      color: var(--espresso);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: var(--bg-white);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      padding: 18px 24px;
+    }
+
+    summary {
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--espresso);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--caramel);
+      font-weight: 700;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin-top: 12px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--espresso);
+      color: #B8ACA0;
+      text-align: center;
+      padding: 36px 20px;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero-grid,
+      .story-grid,
+      .modules-grid,
+      .bonus-grid,
+      .reviews-grid,
+      .showcase-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 48px 0 64px;
+      }
+
+      .hero-image-wrap img {
+        height: 360px;
+      }
+
+      .offer-box {
+        padding: 36px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <div class="top-bar">
+    Descarga Digital Inmediata • <span>Incluye 3 Guías de Regalo por Lanzamiento</span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Edición Digital • Barra de Café en Casa</span>
+        <h1>Prepara Bebidas de Barista Irresistibles en Menos de 5 Minutos</h1>
+        <p class="lead">
+          Domina las proporciones exactas y los trucos de emulsión para lograr espressos cremosos, Iced Lattes, Cold Brews y frappés de especialidad <strong>sin gastar en una máquina profesional</strong>.
+        </p>
+        <ul class="hero-list">
+          <li>Medidas exactas en gramos y cucharadas (cero margen de error).</li>
+          <li>Adaptado a cafetera italiana (Moka), prensa francesa, filtro o espresso.</li>
+          <li>Acceso inmediato en PDF para leer en tu celular, tablet o imprimir.</li>
+        </ul>
+        <a href="#oferta" class="btn checkout-link">¡Quiero Mi Recetario Barista Ahora!</a>
+        <span class="micro-note">Descarga instantánea • Pago único y 100% seguro</span>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80"
+          alt="Latte art servido en taza de cerámica"
+        />
+        <div class="floating-badge">
+          <strong>+50 Recetas Probadas</strong>
+          <span>Calientes, frías, jarabes y espumas</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROBLEMA Y SOLUCIÓN -->
+  <section class="story-section">
+    <div class="container story-grid">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+          alt="Taza de espresso recién extraído con crema dorada"
+        />
+      </div>
+      <div>
+        <span class="eyebrow">El secreto de las cafeterías</span>
+        <h2>¿Por qué el café de cafetería sabe tan distinto al que preparas en casa?</h2>
+        <p style="margin-top: 14px; color: var(--text-muted);">
+          Cada semana gastas dinero en bebidas cargadas de azúcar artificial, mientras en casa los intentos terminan igual:
+        </p>
+        <ul class="pain-list">
+          <li>Café aguado, demasiado ácido o con sabor a quemado.</li>
+          <li>Leche con burbujas grandes que no logra textura cremosa.</li>
+          <li>Cafés helados que pierden todo su sabor apenas se derrite el hielo.</li>
+        </ul>
+        <div class="secret-box">
+          <strong>La buena noticia:</strong> El resultado de una cafetería de especialidad no depende de una máquina de $1,500 USD, sino de <strong>la proporción café-agua, la temperatura y tres técnicas simples de emulsión</strong> que aprenderás paso a paso en <em>El Código Barista</em>.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO DEL RECETARIO -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Menú Completo</span>
+        <h2>Todo lo que Vas a Dominar Dentro del Recetario</h2>
+        <p>Cada receta incluye ingredientes exactos, método casero alternativo, tiempo de preparación y el secreto clave del barista.</p>
+      </div>
+
+      <div class="modules-grid">
+        <div class="module-card">
+          <span class="module-tag">Capítulo 01</span>
+          <h3>Extracción Maestra en Casa</h3>
+          <ul>
+            <li><strong>Espresso Casero Intenso:</strong> Cómo lograr cuerpo y crema avellana en cafetera italiana o prensa francesa.</li>
+            <li><strong>Tabla de Proporciones Exactas:</strong> Elimina para siempre el café amargo o aguado.</li>
+            <li><strong>Calibración Rápida:</strong> Ajusta cualquier grano que compres en el supermercado.</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <span class="module-tag">Capítulo 02</span>
+          <h3>Clásicos Calientes de Autor</h3>
+          <ul>
+            <li><strong>Cappuccino Sedoso y Flat White:</strong> Equilibrio perfecto entre café intenso y microespuma brillante.</li>
+            <li><strong>Latte Macchiato en Capas:</strong> Presentación visual impecable en vaso de cristal.</li>
+            <li><strong>Mocha Belga Oscuro & Bombón:</strong> Fusión gourmet sin empalagar.</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <span class="module-tag">Capítulo 03</span>
+          <h3>Barra Fría & Cold Brew Viral</h3>
+          <ul>
+            <li><strong>Cold Brew Concentrado (18h):</strong> 67% menos acidez, dulce natural y listo para toda la semana.</li>
+            <li><strong>Iced Caramel Macchiato & Espresso Tonic:</strong> Refrescantes, aromáticos y fotogénicos.</li>
+            <li><strong>Frappés Cremosos Sin Separarse:</strong> El truco emulsionante para que el hielo no agüe tu bebida.</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <span class="module-tag">Capítulo 04</span>
+          <h3>Jarabes Artesanales y Arte Latte</h3>
+          <ul>
+            <li><strong>Siropes Caseros en 10 Minutos:</strong> Vainilla natural, caramelo salado y crema irlandesa sin alcohol.</li>
+            <li><strong>Cold Foams (Espumas Frías):</strong> Espuma densa de avellana y canela que flota sobre cafés helados.</li>
+            <li><strong>Microespuma con Herramientas de $5:</strong> Técnica con batidor de mano y primeros diseños de arte latte.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Banner visual limpio -->
+      <div class="showcase-banner">
+        <div class="showcase-text">
+          <h3>Se Paga Solo con tus Primeros 3 Cafés</h3>
+          <p>
+            Dejar de comprar apenas tres bebidas fuera de casa esta semana cubre el valor completo del recetario. Disfruta calidad de cafetería todos los días controlando los ingredientes y el nivel exacto de dulzor.
+          </p>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80"
+          alt="Iced latte con crema cayendo en vaso con hielo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- BONOS -->
+  <section class="bonuses-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Regalos por Tiempo Limitado</span>
+        <h2>Descarga Hoy y Llévate 3 Guías Exclusivas Gratis</h2>
+        <p>Complementos diseñados para que tus bebidas salgan perfectas desde el primer intento.</p>
+      </div>
+
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <div>
+            <span class="bonus-badge">BONO #1 • GRATIS HOY</span>
+            <h3>Guía de Leches Vegetales Sin Cortarse</h3>
+            <p>Qué marcas y porcentajes de grasa funcionan mejor con avena, almendra, soya y coco para lograr espuma estable.</p>
+          </div>
+          <div class="bonus-value"><span>Valor: $12 USD</span> Incluido Gratis</div>
+        </div>
+
+        <div class="bonus-card">
+          <div>
+            <span class="bonus-badge">BONO #2 • GRATIS HOY</span>
+            <h3>Tabla de Maridaje Barista</h3>
+            <p>Descubre qué panadería, postre o snack combina mejor con cada perfil de tueste para potenciar el sabor.</p>
+          </div>
+          <div class="bonus-value"><span>Valor: $10 USD</span> Incluido Gratis</div>
+        </div>
+
+        <div class="bonus-card">
+          <div>
+            <span class="bonus-badge">BONO #3 • GRATIS HOY</span>
+            <h3>Checklist del Rincón Barista</h3>
+            <p>Los únicos accesorios económicos que realmente marcan la diferencia en tu cocina, sin gastar de más.</p>
+          </div>
+          <div class="bonus-value"><span>Valor: $9 USD</span> Incluido Gratis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Experiencias Reales</span>
+        <h2>Lo que Dicen Quienes Ya Transformaron sus Mañanas</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Pensé que necesitaba una máquina de $600 para hacer un buen cappuccino. Con la técnica de prensa francesa y cafetera italiana del libro, mi café supera al de la cafetería."</p>
+          <div class="reviewer">— Camila M.</div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Solo por las recetas de Cold Brew y los siropes caseros de vainilla y caramelo ya vale diez veces lo que cuesta. Llevo dos meses sin comprar café helado en la calle."</p>
+          <div class="reviewer">— Andrés R.</div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Las instrucciones vienen en gramos y en cucharadas, así que no te pierdes aunque seas principiante. Ahora todos en casa me piden café cuando vienen de visita."</p>
+          <div class="reviewer">— Valeria G.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA IRRESISTIBLE -->
+  <section id="oferta" class="offer-section">
+    <div class="container">
+      <div class="offer-box">
+        <span class="eyebrow">Acceso Digital Completo</span>
+        <h2>Empieza a Preparar Café de Especialidad Hoy Mismo</h2>
+
+        <ul class="stack-list">
+          <li>
+            <span><strong>Recetario Maestro "El Código Barista"</strong> (+50 Recetas)</span>
+            <span class="price-tag">$27.00 USD</span>
+          </li>
+          <li>
+            <span><strong>Bono 1:</strong> Guía de Leches Vegetales Sin Cortarse</span>
+            <span class="price-tag">$12.00 USD</span>
+          </li>
+          <li>
+            <span><strong>Bono 2:</strong> Tabla de Maridaje Barista Dulce & Salado</span>
+            <span class="price-tag">$10.00 USD</span>
+          </li>
+          <li>
+            <span><strong>Bono 3:</strong> Checklist del Rincón Barista Inteligente</span>
+            <span class="price-tag">$9.00 USD</span>
+          </li>
+        </ul>
+
+        <div class="price-block">
+          <div class="old-price">Valor total del paquete: <span>$58.00 USD</span></div>
+          <div class="current-price">$14.99 USD</div>
+          <div style="font-size: 0.9rem; color: var(--text-muted);">Pago único • Acceso de por vida • Sin suscripciones</div>
+        </div>
+
+        <a href="#" class="btn btn-full checkout-link">¡Descargar Mi Recetario y Bonos Ahora!</a>
+        <span class="micro-note">Entrega automática a tu correo electrónico en menos de 2 minutos</span>
+
+        <div class="guarantee-box">
+          <strong>Garantía Blindada de 7 Días Sin Riesgo</strong>
+          Prepara tus primeras recetas en casa. Si sientes que no son claras o no notas una mejora real en el sabor de tu café, escríbenos dentro de los primeros 7 días y te devolvemos el 100% de tu dinero.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Dudas Resueltas</span>
+        <h2>Preguntas Frecuentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>¿Necesito una máquina de espresso profesional para hacer estas recetas?</summary>
+          <p>No. Todas las recetas están adaptadas para métodos caseros accesibles como cafetera italiana (Moka), prensa francesa, cafetera de filtro tradicional o máquinas domésticas.</p>
+        </details>
+
+        <details>
+          <summary>¿Los ingredientes son fáciles de conseguir?</summary>
+          <p>Sí. Utilizamos ingredientes que encuentras en cualquier supermercado local, y además te enseñamos a preparar tus propios siropes y espumas artesanales en minutos.</p>
+        </details>
+
+        <details>
+          <summary>¿Cómo y cuándo recibo el recetario?</summary>
+          <p>Inmediatamente después de completar tu pago recibirás el enlace de descarga directa en tu correo electrónico. Podrás abrirlo en tu celular, tablet, computadora o imprimirlo.</p>
+        </details>
+
+        <details>
+          <summary>¿Sirve si nunca he preparado café especial antes?</summary>
+          <p>Totalmente. Está explicado paso a paso, con medidas en gramos y cucharadas caseras para que logres resultados consistentes desde el primer día.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p style="color: #FAF7F2; font-weight: 600; margin-bottom: 6px;">El Código Barista • Recetario Digital</p>
+      <p>Todos los derechos reservados. Producto digital descargable en formato PDF.</p>
+    </div>
+  </footer>
+
+  <!-- CONFIGURACIÓN RÁPIDA DEL LINK DE CHECKOUT -->
+  <script>
+    // Pega aquí tu enlace de checkout entre las comillas y se actualizará automáticamente en todos los botones:
+    const CHECKOUT_URL = "https://pay.hotmart.com/Y100186307M";
+
+    document.querySelectorAll('.checkout-link').forEach(btn => {
+      btn.setAttribute('href', CHECKOUT_URL);
+    });
+  </script>
+
+</body>
+</html>
